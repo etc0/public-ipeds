@@ -1,0 +1,3322 @@
+version: 2
+
+models:
+  - name: stg_raw__c2018_a
+    description: "IPEDS Completions Data for Survey Year 2018"
+    tests:
+      - dbt_utils.equal_rowcount:
+          arguments:
+            compare_model: source('raw', 'c2018_a')
+    columns:
+      - name: survey_year
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: institution_id
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: cip_code
+        data_type: string
+
+      - name: major_number
+        data_type: int64
+
+      - name: award_level
+        data_type: int64
+
+      - name: provisional_total_completions
+        data_type: string
+
+      - name: total_completions
+        data_type: int64
+
+      - name: provisional_male_completions
+        data_type: string
+
+      - name: male_completions
+        data_type: int64
+
+      - name: provisional_female_completions
+        data_type: string
+
+      - name: female_completions
+        data_type: int64
+
+      - name: provisional_aian_total_completions
+        data_type: string
+
+      - name: aian_total_completions
+        data_type: int64
+
+      - name: provisional_aian_male_completions
+        data_type: string
+
+      - name: aian_male_completions
+        data_type: int64
+
+      - name: provisional_aian_female_completions
+        data_type: string
+
+      - name: aian_female_completions
+        data_type: int64
+
+      - name: provisional_asian_total_completions
+        data_type: string
+
+      - name: asian_total_completions
+        data_type: int64
+
+      - name: provisional_asian_male_completions
+        data_type: string
+
+      - name: asian_male_completions
+        data_type: int64
+
+      - name: provisional_asian_female_completions
+        data_type: string
+
+      - name: asian_female_completions
+        data_type: int64
+
+      - name: provisional_black_total_completions
+        data_type: string
+
+      - name: black_total_completions
+        data_type: int64
+
+      - name: provisional_black_male_completions
+        data_type: string
+
+      - name: black_male_completions
+        data_type: int64
+
+      - name: provisional_black_female_completions
+        data_type: string
+
+      - name: black_female_completions
+        data_type: int64
+
+      - name: provisional_hispanic_total_completions
+        data_type: string
+
+      - name: hispanic_total_completions
+        data_type: int64
+
+      - name: provisional_hispanic_male_completions
+        data_type: string
+
+      - name: hispanic_male_completions
+        data_type: int64
+
+      - name: provisional_hispanic_female_completions
+        data_type: string
+
+      - name: hispanic_female_completions
+        data_type: int64
+
+      - name: provisional_nhpi_total_completions
+        data_type: string
+
+      - name: nhpi_total_completions
+        data_type: int64
+
+      - name: provisional_nhpi_male_completions
+        data_type: string
+
+      - name: nhpi_male_completions
+        data_type: int64
+
+      - name: provisional_nhpi_female_completions
+        data_type: string
+
+      - name: nhpi_female_completions
+        data_type: int64
+
+      - name: provisional_white_total_completions
+        data_type: string
+
+      - name: white_total_completions
+        data_type: int64
+
+      - name: provisional_white_male_completions
+        data_type: string
+
+      - name: white_male_completions
+        data_type: int64
+
+      - name: provisional_white_female_completions
+        data_type: string
+
+      - name: white_female_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_total_completions
+        data_type: string
+
+      - name: two_or_more_races_total_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_male_completions
+        data_type: string
+
+      - name: two_or_more_races_male_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_female_completions
+        data_type: string
+
+      - name: two_or_more_races_female_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_total_completions
+        data_type: string
+
+      - name: unknown_race_total_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_male_completions
+        data_type: string
+
+      - name: unknown_race_male_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_female_completions
+        data_type: string
+
+      - name: unknown_race_female_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_total_completions
+        data_type: string
+
+      - name: nonresident_alien_total_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_male_completions
+        data_type: string
+
+      - name: nonresident_alien_male_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_female_completions
+        data_type: string
+
+      - name: nonresident_alien_female_completions
+        data_type: int64
+
+  - name: stg_raw__c2019_a
+    description: "IPEDS Completions Data for Survey Year 2019"
+    tests:
+      - dbt_utils.equal_rowcount:
+          arguments:
+            compare_model: source('raw', 'c2019_a')
+    columns:
+      - name: survey_year
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: institution_id
+        data_type: int64
+
+      - name: cip_code
+        data_type: string
+
+      - name: major_number
+        data_type: int64
+
+      - name: award_level
+        data_type: int64
+
+      - name: provisional_total_completions
+        data_type: string
+
+      - name: total_completions
+        data_type: int64
+
+      - name: provisional_male_completions
+        data_type: string
+
+      - name: male_completions
+        data_type: int64
+
+      - name: provisional_female_completions
+        data_type: string
+
+      - name: female_completions
+        data_type: int64
+
+      - name: provisional_aian_total_completions
+        data_type: string
+
+      - name: aian_total_completions
+        data_type: int64
+
+      - name: provisional_aian_male_completions
+        data_type: string
+
+      - name: aian_male_completions
+        data_type: int64
+
+      - name: provisional_aian_female_completions
+        data_type: string
+
+      - name: aian_female_completions
+        data_type: int64
+
+      - name: provisional_asian_total_completions
+        data_type: string
+
+      - name: asian_total_completions
+        data_type: int64
+
+      - name: provisional_asian_male_completions
+        data_type: string
+
+      - name: asian_male_completions
+        data_type: int64
+
+      - name: provisional_asian_female_completions
+        data_type: string
+
+      - name: asian_female_completions
+        data_type: int64
+
+      - name: provisional_black_total_completions
+        data_type: string
+
+      - name: black_total_completions
+        data_type: int64
+
+      - name: provisional_black_male_completions
+        data_type: string
+
+      - name: black_male_completions
+        data_type: int64
+
+      - name: provisional_black_female_completions
+        data_type: string
+
+      - name: black_female_completions
+        data_type: int64
+
+      - name: provisional_hispanic_total_completions
+        data_type: string
+
+      - name: hispanic_total_completions
+        data_type: int64
+
+      - name: provisional_hispanic_male_completions
+        data_type: string
+
+      - name: hispanic_male_completions
+        data_type: int64
+
+      - name: provisional_hispanic_female_completions
+        data_type: string
+
+      - name: hispanic_female_completions
+        data_type: int64
+
+      - name: provisional_nhpi_total_completions
+        data_type: string
+
+      - name: nhpi_total_completions
+        data_type: int64
+
+      - name: provisional_nhpi_male_completions
+        data_type: string
+
+      - name: nhpi_male_completions
+        data_type: int64
+
+      - name: provisional_nhpi_female_completions
+        data_type: string
+
+      - name: nhpi_female_completions
+        data_type: int64
+
+      - name: provisional_white_total_completions
+        data_type: string
+
+      - name: white_total_completions
+        data_type: int64
+
+      - name: provisional_white_male_completions
+        data_type: string
+
+      - name: white_male_completions
+        data_type: int64
+
+      - name: provisional_white_female_completions
+        data_type: string
+
+      - name: white_female_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_total_completions
+        data_type: string
+
+      - name: two_or_more_races_total_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_male_completions
+        data_type: string
+
+      - name: two_or_more_races_male_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_female_completions
+        data_type: string
+
+      - name: two_or_more_races_female_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_total_completions
+        data_type: string
+
+      - name: unknown_race_total_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_male_completions
+        data_type: string
+
+      - name: unknown_race_male_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_female_completions
+        data_type: string
+
+      - name: unknown_race_female_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_total_completions
+        data_type: string
+
+      - name: nonresident_alien_total_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_male_completions
+        data_type: string
+
+      - name: nonresident_alien_male_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_female_completions
+        data_type: string
+
+      - name: nonresident_alien_female_completions
+        data_type: int64
+
+  - name: stg_raw__c2020_a
+    description: "IPEDS Completions Data for Survey Year 2020"
+    tests:
+      - dbt_utils.equal_rowcount:
+          arguments:
+            compare_model: source('raw', 'c2020_a')
+    columns:
+      - name: survey_year
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: institution_id
+        data_type: int64
+
+      - name: cip_code
+        data_type: string
+
+      - name: major_number
+        data_type: int64
+
+      - name: award_level
+        data_type: int64
+
+      - name: provisional_total_completions
+        data_type: string
+
+      - name: total_completions
+        data_type: int64
+
+      - name: provisional_male_completions
+        data_type: string
+
+      - name: male_completions
+        data_type: int64
+
+      - name: provisional_female_completions
+        data_type: string
+
+      - name: female_completions
+        data_type: int64
+
+      - name: provisional_aian_total_completions
+        data_type: string
+
+      - name: aian_total_completions
+        data_type: int64
+
+      - name: provisional_aian_male_completions
+        data_type: string
+
+      - name: aian_male_completions
+        data_type: int64
+
+      - name: provisional_aian_female_completions
+        data_type: string
+
+      - name: aian_female_completions
+        data_type: int64
+
+      - name: provisional_asian_total_completions
+        data_type: string
+
+      - name: asian_total_completions
+        data_type: int64
+
+      - name: provisional_asian_male_completions
+        data_type: string
+
+      - name: asian_male_completions
+        data_type: int64
+
+      - name: provisional_asian_female_completions
+        data_type: string
+
+      - name: asian_female_completions
+        data_type: int64
+
+      - name: provisional_black_total_completions
+        data_type: string
+
+      - name: black_total_completions
+        data_type: int64
+
+      - name: provisional_black_male_completions
+        data_type: string
+
+      - name: black_male_completions
+        data_type: int64
+
+      - name: provisional_black_female_completions
+        data_type: string
+
+      - name: black_female_completions
+        data_type: int64
+
+      - name: provisional_hispanic_total_completions
+        data_type: string
+
+      - name: hispanic_total_completions
+        data_type: int64
+
+      - name: provisional_hispanic_male_completions
+        data_type: string
+
+      - name: hispanic_male_completions
+        data_type: int64
+
+      - name: provisional_hispanic_female_completions
+        data_type: string
+
+      - name: hispanic_female_completions
+        data_type: int64
+
+      - name: provisional_nhpi_total_completions
+        data_type: string
+
+      - name: nhpi_total_completions
+        data_type: int64
+
+      - name: provisional_nhpi_male_completions
+        data_type: string
+
+      - name: nhpi_male_completions
+        data_type: int64
+
+      - name: provisional_nhpi_female_completions
+        data_type: string
+
+      - name: nhpi_female_completions
+        data_type: int64
+
+      - name: provisional_white_total_completions
+        data_type: string
+
+      - name: white_total_completions
+        data_type: int64
+
+      - name: provisional_white_male_completions
+        data_type: string
+
+      - name: white_male_completions
+        data_type: int64
+
+      - name: provisional_white_female_completions
+        data_type: string
+
+      - name: white_female_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_total_completions
+        data_type: string
+
+      - name: two_or_more_races_total_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_male_completions
+        data_type: string
+
+      - name: two_or_more_races_male_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_female_completions
+        data_type: string
+
+      - name: two_or_more_races_female_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_total_completions
+        data_type: string
+
+      - name: unknown_race_total_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_male_completions
+        data_type: string
+
+      - name: unknown_race_male_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_female_completions
+        data_type: string
+
+      - name: unknown_race_female_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_total_completions
+        data_type: string
+
+      - name: nonresident_alien_total_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_male_completions
+        data_type: string
+
+      - name: nonresident_alien_male_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_female_completions
+        data_type: string
+
+      - name: nonresident_alien_female_completions
+        data_type: int64
+
+  - name: stg_raw__c2021_a
+    description: "IPEDS Completions Data for Survey Year 2021"
+    tests:
+      - dbt_utils.equal_rowcount:
+          arguments:
+            compare_model: source('raw', 'c2021_a')
+    columns:
+      - name: survey_year
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: institution_id
+        data_type: int64
+
+      - name: cip_code
+        data_type: string
+
+      - name: major_number
+        data_type: int64
+
+      - name: award_level
+        data_type: int64
+
+      - name: provisional_total_completions
+        data_type: string
+
+      - name: total_completions
+        data_type: int64
+
+      - name: provisional_male_completions
+        data_type: string
+
+      - name: male_completions
+        data_type: int64
+
+      - name: provisional_female_completions
+        data_type: string
+
+      - name: female_completions
+        data_type: int64
+
+      - name: provisional_aian_total_completions
+        data_type: string
+
+      - name: aian_total_completions
+        data_type: int64
+
+      - name: provisional_aian_male_completions
+        data_type: string
+
+      - name: aian_male_completions
+        data_type: int64
+
+      - name: provisional_aian_female_completions
+        data_type: string
+
+      - name: aian_female_completions
+        data_type: int64
+
+      - name: provisional_asian_total_completions
+        data_type: string
+
+      - name: asian_total_completions
+        data_type: int64
+
+      - name: provisional_asian_male_completions
+        data_type: string
+
+      - name: asian_male_completions
+        data_type: int64
+
+      - name: provisional_asian_female_completions
+        data_type: string
+
+      - name: asian_female_completions
+        data_type: int64
+
+      - name: provisional_black_total_completions
+        data_type: string
+
+      - name: black_total_completions
+        data_type: int64
+
+      - name: provisional_black_male_completions
+        data_type: string
+
+      - name: black_male_completions
+        data_type: int64
+
+      - name: provisional_black_female_completions
+        data_type: string
+
+      - name: black_female_completions
+        data_type: int64
+
+      - name: provisional_hispanic_total_completions
+        data_type: string
+
+      - name: hispanic_total_completions
+        data_type: int64
+
+      - name: provisional_hispanic_male_completions
+        data_type: string
+
+      - name: hispanic_male_completions
+        data_type: int64
+
+      - name: provisional_hispanic_female_completions
+        data_type: string
+
+      - name: hispanic_female_completions
+        data_type: int64
+
+      - name: provisional_nhpi_total_completions
+        data_type: string
+
+      - name: nhpi_total_completions
+        data_type: int64
+
+      - name: provisional_nhpi_male_completions
+        data_type: string
+
+      - name: nhpi_male_completions
+        data_type: int64
+
+      - name: provisional_nhpi_female_completions
+        data_type: string
+
+      - name: nhpi_female_completions
+        data_type: int64
+
+      - name: provisional_white_total_completions
+        data_type: string
+
+      - name: white_total_completions
+        data_type: int64
+
+      - name: provisional_white_male_completions
+        data_type: string
+
+      - name: white_male_completions
+        data_type: int64
+
+      - name: provisional_white_female_completions
+        data_type: string
+
+      - name: white_female_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_total_completions
+        data_type: string
+
+      - name: two_or_more_races_total_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_male_completions
+        data_type: string
+
+      - name: two_or_more_races_male_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_female_completions
+        data_type: string
+
+      - name: two_or_more_races_female_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_total_completions
+        data_type: string
+
+      - name: unknown_race_total_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_male_completions
+        data_type: string
+
+      - name: unknown_race_male_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_female_completions
+        data_type: string
+
+      - name: unknown_race_female_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_total_completions
+        data_type: string
+
+      - name: nonresident_alien_total_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_male_completions
+        data_type: string
+
+      - name: nonresident_alien_male_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_female_completions
+        data_type: string
+
+      - name: nonresident_alien_female_completions
+        data_type: int64
+
+  - name: stg_raw__c2022_a
+    description: "IPEDS Completions Data for Survey Year 2022"
+    tests:
+      - dbt_utils.equal_rowcount:
+          arguments:
+            compare_model: source('raw', 'c2022_a')
+    columns:
+      - name: survey_year
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: institution_id
+        data_type: int64
+
+      - name: cip_code
+        data_type: string
+
+      - name: major_number
+        data_type: int64
+
+      - name: award_level
+        data_type: int64
+
+      - name: provisional_total_completions
+        data_type: string
+
+      - name: total_completions
+        data_type: int64
+
+      - name: provisional_male_completions
+        data_type: string
+
+      - name: male_completions
+        data_type: int64
+
+      - name: provisional_female_completions
+        data_type: string
+
+      - name: female_completions
+        data_type: int64
+
+      - name: provisional_aian_total_completions
+        data_type: string
+
+      - name: aian_total_completions
+        data_type: int64
+
+      - name: provisional_aian_male_completions
+        data_type: string
+
+      - name: aian_male_completions
+        data_type: int64
+
+      - name: provisional_aian_female_completions
+        data_type: string
+
+      - name: aian_female_completions
+        data_type: int64
+
+      - name: provisional_asian_total_completions
+        data_type: string
+
+      - name: asian_total_completions
+        data_type: int64
+
+      - name: provisional_asian_male_completions
+        data_type: string
+
+      - name: asian_male_completions
+        data_type: int64
+
+      - name: provisional_asian_female_completions
+        data_type: string
+
+      - name: asian_female_completions
+        data_type: int64
+
+      - name: provisional_black_total_completions
+        data_type: string
+
+      - name: black_total_completions
+        data_type: int64
+
+      - name: provisional_black_male_completions
+        data_type: string
+
+      - name: black_male_completions
+        data_type: int64
+
+      - name: provisional_black_female_completions
+        data_type: string
+
+      - name: black_female_completions
+        data_type: int64
+
+      - name: provisional_hispanic_total_completions
+        data_type: string
+
+      - name: hispanic_total_completions
+        data_type: int64
+
+      - name: provisional_hispanic_male_completions
+        data_type: string
+
+      - name: hispanic_male_completions
+        data_type: int64
+
+      - name: provisional_hispanic_female_completions
+        data_type: string
+
+      - name: hispanic_female_completions
+        data_type: int64
+
+      - name: provisional_nhpi_total_completions
+        data_type: string
+
+      - name: nhpi_total_completions
+        data_type: int64
+
+      - name: provisional_nhpi_male_completions
+        data_type: string
+
+      - name: nhpi_male_completions
+        data_type: int64
+
+      - name: provisional_nhpi_female_completions
+        data_type: string
+
+      - name: nhpi_female_completions
+        data_type: int64
+
+      - name: provisional_white_total_completions
+        data_type: string
+
+      - name: white_total_completions
+        data_type: int64
+
+      - name: provisional_white_male_completions
+        data_type: string
+
+      - name: white_male_completions
+        data_type: int64
+
+      - name: provisional_white_female_completions
+        data_type: string
+
+      - name: white_female_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_total_completions
+        data_type: string
+
+      - name: two_or_more_races_total_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_male_completions
+        data_type: string
+
+      - name: two_or_more_races_male_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_female_completions
+        data_type: string
+
+      - name: two_or_more_races_female_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_total_completions
+        data_type: string
+
+      - name: unknown_race_total_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_male_completions
+        data_type: string
+
+      - name: unknown_race_male_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_female_completions
+        data_type: string
+
+      - name: unknown_race_female_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_total_completions
+        data_type: string
+
+      - name: nonresident_alien_total_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_male_completions
+        data_type: string
+
+      - name: nonresident_alien_male_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_female_completions
+        data_type: string
+
+      - name: nonresident_alien_female_completions
+        data_type: int64
+
+  - name: stg_raw__c2023_a
+    description: "IPEDS Completions Data for Survey Year 2023"
+    tests:
+      - dbt_utils.equal_rowcount:
+          arguments:
+            compare_model: source('raw', 'c2023_a')
+    columns:
+      - name: survey_year
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: institution_id
+        data_type: int64
+
+      - name: cip_code
+        data_type: string
+
+      - name: major_number
+        data_type: int64
+
+      - name: award_level
+        data_type: int64
+
+      - name: provisional_total_completions
+        data_type: string
+
+      - name: total_completions
+        data_type: int64
+
+      - name: provisional_male_completions
+        data_type: string
+
+      - name: male_completions
+        data_type: int64
+
+      - name: provisional_female_completions
+        data_type: string
+
+      - name: female_completions
+        data_type: int64
+
+      - name: provisional_aian_total_completions
+        data_type: string
+
+      - name: aian_total_completions
+        data_type: int64
+
+      - name: provisional_aian_male_completions
+        data_type: string
+
+      - name: aian_male_completions
+        data_type: int64
+
+      - name: provisional_aian_female_completions
+        data_type: string
+
+      - name: aian_female_completions
+        data_type: int64
+
+      - name: provisional_asian_total_completions
+        data_type: string
+
+      - name: asian_total_completions
+        data_type: int64
+
+      - name: provisional_asian_male_completions
+        data_type: string
+
+      - name: asian_male_completions
+        data_type: int64
+
+      - name: provisional_asian_female_completions
+        data_type: string
+
+      - name: asian_female_completions
+        data_type: int64
+
+      - name: provisional_black_total_completions
+        data_type: string
+
+      - name: black_total_completions
+        data_type: int64
+
+      - name: provisional_black_male_completions
+        data_type: string
+
+      - name: black_male_completions
+        data_type: int64
+
+      - name: provisional_black_female_completions
+        data_type: string
+
+      - name: black_female_completions
+        data_type: int64
+
+      - name: provisional_hispanic_total_completions
+        data_type: string
+
+      - name: hispanic_total_completions
+        data_type: int64
+
+      - name: provisional_hispanic_male_completions
+        data_type: string
+
+      - name: hispanic_male_completions
+        data_type: int64
+
+      - name: provisional_hispanic_female_completions
+        data_type: string
+
+      - name: hispanic_female_completions
+        data_type: int64
+
+      - name: provisional_nhpi_total_completions
+        data_type: string
+
+      - name: nhpi_total_completions
+        data_type: int64
+
+      - name: provisional_nhpi_male_completions
+        data_type: string
+
+      - name: nhpi_male_completions
+        data_type: int64
+
+      - name: provisional_nhpi_female_completions
+        data_type: string
+
+      - name: nhpi_female_completions
+        data_type: int64
+
+      - name: provisional_white_total_completions
+        data_type: string
+
+      - name: white_total_completions
+        data_type: int64
+
+      - name: provisional_white_male_completions
+        data_type: string
+
+      - name: white_male_completions
+        data_type: int64
+
+      - name: provisional_white_female_completions
+        data_type: string
+
+      - name: white_female_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_total_completions
+        data_type: string
+
+      - name: two_or_more_races_total_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_male_completions
+        data_type: string
+
+      - name: two_or_more_races_male_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_female_completions
+        data_type: string
+
+      - name: two_or_more_races_female_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_total_completions
+        data_type: string
+
+      - name: unknown_race_total_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_male_completions
+        data_type: string
+
+      - name: unknown_race_male_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_female_completions
+        data_type: string
+
+      - name: unknown_race_female_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_total_completions
+        data_type: string
+
+      - name: nonresident_alien_total_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_male_completions
+        data_type: string
+
+      - name: nonresident_alien_male_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_female_completions
+        data_type: string
+
+      - name: nonresident_alien_female_completions
+        data_type: int64
+
+  - name: stg_raw__c2024_a
+    description: "IPEDS Completions Data for Survey Year 2024"
+    tests:
+      - dbt_utils.equal_rowcount:
+          arguments:
+            compare_model: source('raw', 'c2024_a')
+    columns:
+      - name: survey_year
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: institution_id
+        data_type: int64
+
+      - name: cip_code
+        data_type: string
+
+      - name: major_number
+        data_type: int64
+
+      - name: award_level
+        data_type: int64
+
+      - name: provisional_total_completions
+        data_type: string
+
+      - name: total_completions
+        data_type: int64
+
+      - name: provisional_male_completions
+        data_type: string
+
+      - name: male_completions
+        data_type: int64
+
+      - name: provisional_female_completions
+        data_type: string
+
+      - name: female_completions
+        data_type: int64
+
+      - name: provisional_aian_total_completions
+        data_type: string
+
+      - name: aian_total_completions
+        data_type: int64
+
+      - name: provisional_aian_male_completions
+        data_type: string
+
+      - name: aian_male_completions
+        data_type: int64
+
+      - name: provisional_aian_female_completions
+        data_type: string
+
+      - name: aian_female_completions
+        data_type: int64
+
+      - name: provisional_asian_total_completions
+        data_type: string
+
+      - name: asian_total_completions
+        data_type: int64
+
+      - name: provisional_asian_male_completions
+        data_type: string
+
+      - name: asian_male_completions
+        data_type: int64
+
+      - name: provisional_asian_female_completions
+        data_type: string
+
+      - name: asian_female_completions
+        data_type: int64
+
+      - name: provisional_black_total_completions
+        data_type: string
+
+      - name: black_total_completions
+        data_type: int64
+
+      - name: provisional_black_male_completions
+        data_type: string
+
+      - name: black_male_completions
+        data_type: int64
+
+      - name: provisional_black_female_completions
+        data_type: string
+
+      - name: black_female_completions
+        data_type: int64
+
+      - name: provisional_hispanic_total_completions
+        data_type: string
+
+      - name: hispanic_total_completions
+        data_type: int64
+
+      - name: provisional_hispanic_male_completions
+        data_type: string
+
+      - name: hispanic_male_completions
+        data_type: int64
+
+      - name: provisional_hispanic_female_completions
+        data_type: string
+
+      - name: hispanic_female_completions
+        data_type: int64
+
+      - name: provisional_nhpi_total_completions
+        data_type: string
+
+      - name: nhpi_total_completions
+        data_type: int64
+
+      - name: provisional_nhpi_male_completions
+        data_type: string
+
+      - name: nhpi_male_completions
+        data_type: int64
+
+      - name: provisional_nhpi_female_completions
+        data_type: string
+
+      - name: nhpi_female_completions
+        data_type: int64
+
+      - name: provisional_white_total_completions
+        data_type: string
+
+      - name: white_total_completions
+        data_type: int64
+
+      - name: provisional_white_male_completions
+        data_type: string
+
+      - name: white_male_completions
+        data_type: int64
+
+      - name: provisional_white_female_completions
+        data_type: string
+
+      - name: white_female_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_total_completions
+        data_type: string
+
+      - name: two_or_more_races_total_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_male_completions
+        data_type: string
+
+      - name: two_or_more_races_male_completions
+        data_type: int64
+
+      - name: provisional_two_or_more_races_female_completions
+        data_type: string
+
+      - name: two_or_more_races_female_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_total_completions
+        data_type: string
+
+      - name: unknown_race_total_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_male_completions
+        data_type: string
+
+      - name: unknown_race_male_completions
+        data_type: int64
+
+      - name: provisional_unknown_race_female_completions
+        data_type: string
+
+      - name: unknown_race_female_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_total_completions
+        data_type: string
+
+      - name: nonresident_alien_total_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_male_completions
+        data_type: string
+
+      - name: nonresident_alien_male_completions
+        data_type: int64
+
+      - name: provisional_nonresident_alien_female_completions
+        data_type: string
+
+      - name: nonresident_alien_female_completions
+        data_type: int64
+
+  - name: stg_raw__hd2018
+    description: "IPEDS Institutional Characteristics Data for 2018"
+    columns:
+      - name: survey_year
+        data_type: int64
+
+      - name: institution_id
+        data_type: int64
+
+      - name: institution_name
+        data_type: string
+
+      - name: institution_alias
+        data_type: string
+
+      - name: address
+        data_type: string
+
+      - name: city
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: zip_code
+        data_type: string
+
+      - name: fips_code
+        data_type: int64
+
+      - name: bureau_of_economic_analysis_region
+        data_type: int64
+
+      - name: chief_executive_name
+        data_type: string
+
+      - name: chief_executive_title
+        data_type: string
+
+      - name: general_telephone
+        data_type: string
+
+      - name: employer_identification_number
+        data_type: int64
+
+      - name: duns_number
+        data_type: string
+
+      - name: ueis_number
+        data_type: string
+
+      - name: ope_id
+        data_type: int64
+
+      - name: ope_flag
+        data_type: int64
+
+      - name: website_address
+        data_type: string
+
+      - name: admin_url
+        data_type: string
+
+      - name: financial_aid_url
+        data_type: string
+
+      - name: application_url
+        data_type: string
+
+      - name: net_price_url
+        data_type: string
+
+      - name: veteran_url
+        data_type: string
+
+      - name: athletics_url
+        data_type: string
+
+      - name: disability_url
+        data_type: string
+
+      - name: sector_code
+        data_type: int64
+
+      - name: institution_control_level
+        data_type: int64
+
+      - name: control_code
+        data_type: int64
+
+      - name: high_level_offering
+        data_type: int64
+
+      - name: undergraduate_offering
+        data_type: int64
+
+      - name: graduate_offering
+        data_type: int64
+
+      - name: highest_degree_offered
+        data_type: int64
+
+      - name: degree_granting
+        data_type: int64
+
+      - name: historically_black_college_university
+        data_type: int64
+
+      - name: hospital_code
+        data_type: int64
+
+      - name: medical_school
+        data_type: int64
+
+      - name: tribal_college
+        data_type: int64
+
+      - name: locale_code
+        data_type: int64
+
+      - name: open_admission_policy
+        data_type: int64
+
+      - name: insitution_status
+        data_type: string
+
+      - name: new_id
+        data_type: int64
+
+      - name: death_year
+        data_type: int64
+
+      - name: close_date
+        data_type: string
+
+      - name: currently_active
+        data_type: int64
+
+      - name: primarily_postsecondary_indicator
+        data_type: int64
+
+      - name: postsecondary_insitution_indicator
+        data_type: int64
+
+      - name: postsecondary_title_iv_indicator
+        data_type: int64
+
+      - name: report_month
+        data_type: int64
+
+      - name: institution_category
+        data_type: int64
+
+      - name: carnegie_2000
+        data_type: int64
+
+      - name: carnegie_2005_2010_basic
+        data_type: int64
+
+      - name: carnegie_2015_basic
+        data_type: int64
+
+      - name: carnegie_2018_basic
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2018_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2018_size_setting
+        data_type: int64
+
+      - name: carnegie_2021_basic
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2021_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2021_size_setting
+        data_type: int64
+
+      - name: carnegie_2025_instructional_composition
+        data_type: int64
+
+      - name: carnegie_2025_size_and_enrollment_categories
+        data_type: int64
+
+      - name: carnegie_2025_research_classification
+        data_type: int64
+
+      - name: carnegie_2025_size
+        data_type: int64
+
+      - name: carnegie_2025_artificial_left_framework
+        data_type: int64
+
+      - name: carnegie_2025_artificial_program_mix
+        data_type: int64
+
+      - name: carnegie_2025_graduate_program_mix
+        data_type: int64
+
+      - name: land_grant_status
+        data_type: int64
+
+      - name: institution_size
+        data_type: int64
+
+      - name: system_type
+        data_type: int64
+
+      - name: system_name
+        data_type: string
+
+      - name: system_code
+        data_type: int64
+
+      - name: core_based_statistical_area_code
+        data_type: int64
+
+      - name: core_based_statistical_area_type
+        data_type: int64
+
+      - name: combined_statistical_area_code
+        data_type: int64
+
+      - name: new_england_city_and_town_area_code
+        data_type: int64
+
+      - name: county_code
+        data_type: int64
+
+      - name: county_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: congressional_district_code
+        data_type: int64
+
+      - name: longitude
+        data_type: float64
+
+      - name: latitude
+        data_type: float64
+
+      - name: data_feedback_report_comparison_group_id
+        data_type: int64
+
+      - name: data_feedback_report_institution_submitted_group_id
+        data_type: int64
+
+  - name: stg_raw__hd2019
+    description: "IPEDS Institutional Characteristics Data for 2019"
+    columns:
+      - name: survey_year
+        data_type: int64
+
+      - name: institution_id
+        data_type: int64
+
+      - name: institution_name
+        data_type: string
+
+      - name: institution_alias
+        data_type: string
+
+      - name: address
+        data_type: string
+
+      - name: city
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: zip_code
+        data_type: string
+
+      - name: fips_code
+        data_type: int64
+
+      - name: bureau_of_economic_analysis_region
+        data_type: int64
+
+      - name: chief_executive_name
+        data_type: string
+
+      - name: chief_executive_title
+        data_type: string
+
+      - name: general_telephone
+        data_type: string
+
+      - name: employer_identification_number
+        data_type: int64
+
+      - name: duns_number
+        data_type: string
+
+      - name: ueis_number
+        data_type: string
+
+      - name: ope_id
+        data_type: int64
+
+      - name: ope_flag
+        data_type: int64
+
+      - name: website_address
+        data_type: string
+
+      - name: admin_url
+        data_type: string
+
+      - name: financial_aid_url
+        data_type: string
+
+      - name: application_url
+        data_type: string
+
+      - name: net_price_url
+        data_type: string
+
+      - name: veteran_url
+        data_type: string
+
+      - name: athletics_url
+        data_type: string
+
+      - name: disability_url
+        data_type: string
+
+      - name: sector_code
+        data_type: int64
+
+      - name: institution_control_level
+        data_type: int64
+
+      - name: control_code
+        data_type: int64
+
+      - name: high_level_offering
+        data_type: int64
+
+      - name: undergraduate_offering
+        data_type: int64
+
+      - name: graduate_offering
+        data_type: int64
+
+      - name: highest_degree_offered
+        data_type: int64
+
+      - name: degree_granting
+        data_type: int64
+
+      - name: historically_black_college_university
+        data_type: int64
+
+      - name: hospital_code
+        data_type: int64
+
+      - name: medical_school
+        data_type: int64
+
+      - name: tribal_college
+        data_type: int64
+
+      - name: locale_code
+        data_type: int64
+
+      - name: open_admission_policy
+        data_type: int64
+
+      - name: insitution_status
+        data_type: string
+
+      - name: new_id
+        data_type: int64
+
+      - name: death_year
+        data_type: int64
+
+      - name: close_date
+        data_type: string
+
+      - name: currently_active
+        data_type: int64
+
+      - name: primarily_postsecondary_indicator
+        data_type: int64
+
+      - name: postsecondary_insitution_indicator
+        data_type: int64
+
+      - name: postsecondary_title_iv_indicator
+        data_type: int64
+
+      - name: report_month
+        data_type: int64
+
+      - name: institution_category
+        data_type: int64
+
+      - name: carnegie_2000
+        data_type: int64
+
+      - name: carnegie_2005_2010_basic
+        data_type: int64
+
+      - name: carnegie_2015_basic
+        data_type: int64
+
+      - name: carnegie_2018_basic
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2018_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2018_size_setting
+        data_type: int64
+
+      - name: carnegie_2021_basic
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2021_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2021_size_setting
+        data_type: int64
+
+      - name: carnegie_2025_instructional_composition
+        data_type: int64
+
+      - name: carnegie_2025_size_and_enrollment_categories
+        data_type: int64
+
+      - name: carnegie_2025_research_classification
+        data_type: int64
+
+      - name: carnegie_2025_size
+        data_type: int64
+
+      - name: carnegie_2025_artificial_left_framework
+        data_type: int64
+
+      - name: carnegie_2025_artificial_program_mix
+        data_type: int64
+
+      - name: carnegie_2025_graduate_program_mix
+        data_type: int64
+
+      - name: land_grant_status
+        data_type: int64
+
+      - name: institution_size
+        data_type: int64
+
+      - name: system_type
+        data_type: int64
+
+      - name: system_name
+        data_type: string
+
+      - name: system_code
+        data_type: int64
+
+      - name: core_based_statistical_area_code
+        data_type: int64
+
+      - name: core_based_statistical_area_type
+        data_type: int64
+
+      - name: combined_statistical_area_code
+        data_type: int64
+
+      - name: new_england_city_and_town_area_code
+        data_type: int64
+
+      - name: county_code
+        data_type: int64
+
+      - name: county_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: congressional_district_code
+        data_type: int64
+
+      - name: longitude
+        data_type: float64
+
+      - name: latitude
+        data_type: float64
+
+      - name: data_feedback_report_comparison_group_id
+        data_type: int64
+
+      - name: data_feedback_report_institution_submitted_group_id
+        data_type: int64
+
+  - name: stg_raw__hd2020
+    description: "IPEDS Institutional Characteristics Data for 2020"
+    columns:
+      - name: survey_year
+        data_type: int64
+
+      - name: institution_id
+        data_type: int64
+
+      - name: institution_name
+        data_type: string
+
+      - name: institution_alias
+        data_type: string
+
+      - name: address
+        data_type: string
+
+      - name: city
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: zip_code
+        data_type: string
+
+      - name: fips_code
+        data_type: int64
+
+      - name: bureau_of_economic_analysis_region
+        data_type: int64
+
+      - name: chief_executive_name
+        data_type: string
+
+      - name: chief_executive_title
+        data_type: string
+
+      - name: general_telephone
+        data_type: string
+
+      - name: employer_identification_number
+        data_type: int64
+
+      - name: duns_number
+        data_type: string
+
+      - name: ueis_number
+        data_type: string
+
+      - name: ope_id
+        data_type: int64
+
+      - name: ope_flag
+        data_type: int64
+
+      - name: website_address
+        data_type: string
+
+      - name: admin_url
+        data_type: string
+
+      - name: financial_aid_url
+        data_type: string
+
+      - name: application_url
+        data_type: string
+
+      - name: net_price_url
+        data_type: string
+
+      - name: veteran_url
+        data_type: string
+
+      - name: athletics_url
+        data_type: string
+
+      - name: disability_url
+        data_type: string
+
+      - name: sector_code
+        data_type: int64
+
+      - name: institution_control_level
+        data_type: int64
+
+      - name: control_code
+        data_type: int64
+
+      - name: high_level_offering
+        data_type: int64
+
+      - name: undergraduate_offering
+        data_type: int64
+
+      - name: graduate_offering
+        data_type: int64
+
+      - name: highest_degree_offered
+        data_type: int64
+
+      - name: degree_granting
+        data_type: int64
+
+      - name: historically_black_college_university
+        data_type: int64
+
+      - name: hospital_code
+        data_type: int64
+
+      - name: medical_school
+        data_type: int64
+
+      - name: tribal_college
+        data_type: int64
+
+      - name: locale_code
+        data_type: int64
+
+      - name: open_admission_policy
+        data_type: int64
+
+      - name: insitution_status
+        data_type: string
+
+      - name: new_id
+        data_type: int64
+
+      - name: death_year
+        data_type: int64
+
+      - name: close_date
+        data_type: string
+
+      - name: currently_active
+        data_type: int64
+
+      - name: primarily_postsecondary_indicator
+        data_type: int64
+
+      - name: postsecondary_insitution_indicator
+        data_type: int64
+
+      - name: postsecondary_title_iv_indicator
+        data_type: int64
+
+      - name: report_month
+        data_type: int64
+
+      - name: institution_category
+        data_type: int64
+
+      - name: carnegie_2000
+        data_type: int64
+
+      - name: carnegie_2005_2010_basic
+        data_type: int64
+
+      - name: carnegie_2015_basic
+        data_type: int64
+
+      - name: carnegie_2018_basic
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2018_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2018_size_setting
+        data_type: int64
+
+      - name: carnegie_2021_basic
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2021_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2021_size_setting
+        data_type: int64
+
+      - name: carnegie_2025_instructional_composition
+        data_type: int64
+
+      - name: carnegie_2025_size_and_enrollment_categories
+        data_type: int64
+
+      - name: carnegie_2025_research_classification
+        data_type: int64
+
+      - name: carnegie_2025_size
+        data_type: int64
+
+      - name: carnegie_2025_artificial_left_framework
+        data_type: int64
+
+      - name: carnegie_2025_artificial_program_mix
+        data_type: int64
+
+      - name: carnegie_2025_graduate_program_mix
+        data_type: int64
+
+      - name: land_grant_status
+        data_type: int64
+
+      - name: institution_size
+        data_type: int64
+
+      - name: system_type
+        data_type: int64
+
+      - name: system_name
+        data_type: string
+
+      - name: system_code
+        data_type: int64
+
+      - name: core_based_statistical_area_code
+        data_type: int64
+
+      - name: core_based_statistical_area_type
+        data_type: int64
+
+      - name: combined_statistical_area_code
+        data_type: int64
+
+      - name: new_england_city_and_town_area_code
+        data_type: int64
+
+      - name: county_code
+        data_type: int64
+
+      - name: county_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: congressional_district_code
+        data_type: int64
+
+      - name: longitude
+        data_type: float64
+
+      - name: latitude
+        data_type: float64
+
+      - name: data_feedback_report_comparison_group_id
+        data_type: int64
+
+      - name: data_feedback_report_institution_submitted_group_id
+        data_type: int64
+
+  - name: stg_raw__hd2021
+    description: "IPEDS Institutional Characteristics Data for 2021"
+    columns:
+      - name: survey_year
+        data_type: int64
+
+      - name: institution_id
+        data_type: int64
+
+      - name: institution_name
+        data_type: string
+
+      - name: institution_alias
+        data_type: string
+
+      - name: address
+        data_type: string
+
+      - name: city
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: zip_code
+        data_type: string
+
+      - name: fips_code
+        data_type: int64
+
+      - name: bureau_of_economic_analysis_region
+        data_type: int64
+
+      - name: chief_executive_name
+        data_type: string
+
+      - name: chief_executive_title
+        data_type: string
+
+      - name: general_telephone
+        data_type: string
+
+      - name: employer_identification_number
+        data_type: int64
+
+      - name: duns_number
+        data_type: string
+
+      - name: ueis_number
+        data_type: string
+
+      - name: ope_id
+        data_type: int64
+
+      - name: ope_flag
+        data_type: int64
+
+      - name: website_address
+        data_type: string
+
+      - name: admin_url
+        data_type: string
+
+      - name: financial_aid_url
+        data_type: string
+
+      - name: application_url
+        data_type: string
+
+      - name: net_price_url
+        data_type: string
+
+      - name: veteran_url
+        data_type: string
+
+      - name: athletics_url
+        data_type: string
+
+      - name: disability_url
+        data_type: string
+
+      - name: sector_code
+        data_type: int64
+
+      - name: institution_control_level
+        data_type: int64
+
+      - name: control_code
+        data_type: int64
+
+      - name: high_level_offering
+        data_type: int64
+
+      - name: undergraduate_offering
+        data_type: int64
+
+      - name: graduate_offering
+        data_type: int64
+
+      - name: highest_degree_offered
+        data_type: int64
+
+      - name: degree_granting
+        data_type: int64
+
+      - name: historically_black_college_university
+        data_type: int64
+
+      - name: hospital_code
+        data_type: int64
+
+      - name: medical_school
+        data_type: int64
+
+      - name: tribal_college
+        data_type: int64
+
+      - name: locale_code
+        data_type: int64
+
+      - name: open_admission_policy
+        data_type: int64
+
+      - name: insitution_status
+        data_type: string
+
+      - name: new_id
+        data_type: int64
+
+      - name: death_year
+        data_type: int64
+
+      - name: close_date
+        data_type: string
+
+      - name: currently_active
+        data_type: int64
+
+      - name: primarily_postsecondary_indicator
+        data_type: int64
+
+      - name: postsecondary_insitution_indicator
+        data_type: int64
+
+      - name: postsecondary_title_iv_indicator
+        data_type: int64
+
+      - name: report_month
+        data_type: int64
+
+      - name: institution_category
+        data_type: int64
+
+      - name: carnegie_2000
+        data_type: int64
+
+      - name: carnegie_2005_2010_basic
+        data_type: int64
+
+      - name: carnegie_2015_basic
+        data_type: int64
+
+      - name: carnegie_2018_basic
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2018_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2018_size_setting
+        data_type: int64
+
+      - name: carnegie_2021_basic
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2021_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2021_size_setting
+        data_type: int64
+
+      - name: carnegie_2025_instructional_composition
+        data_type: int64
+
+      - name: carnegie_2025_size_and_enrollment_categories
+        data_type: int64
+
+      - name: carnegie_2025_research_classification
+        data_type: int64
+
+      - name: carnegie_2025_size
+        data_type: int64
+
+      - name: carnegie_2025_artificial_left_framework
+        data_type: int64
+
+      - name: carnegie_2025_artificial_program_mix
+        data_type: int64
+
+      - name: carnegie_2025_graduate_program_mix
+        data_type: int64
+
+      - name: land_grant_status
+        data_type: int64
+
+      - name: institution_size
+        data_type: int64
+
+      - name: system_type
+        data_type: int64
+
+      - name: system_name
+        data_type: string
+
+      - name: system_code
+        data_type: int64
+
+      - name: core_based_statistical_area_code
+        data_type: int64
+
+      - name: core_based_statistical_area_type
+        data_type: int64
+
+      - name: combined_statistical_area_code
+        data_type: int64
+
+      - name: new_england_city_and_town_area_code
+        data_type: int64
+
+      - name: county_code
+        data_type: int64
+
+      - name: county_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: congressional_district_code
+        data_type: int64
+
+      - name: longitude
+        data_type: float64
+
+      - name: latitude
+        data_type: float64
+
+      - name: data_feedback_report_comparison_group_id
+        data_type: int64
+
+      - name: data_feedback_report_institution_submitted_group_id
+        data_type: int64
+
+  - name: stg_raw__hd2022
+    description: "IPEDS Institutional Characteristics Data for 2022"
+    columns:
+      - name: survey_year
+        data_type: int64
+
+      - name: institution_id
+        data_type: int64
+
+      - name: institution_name
+        data_type: string
+
+      - name: institution_alias
+        data_type: string
+
+      - name: address
+        data_type: string
+
+      - name: city
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: zip_code
+        data_type: string
+
+      - name: fips_code
+        data_type: int64
+
+      - name: bureau_of_economic_analysis_region
+        data_type: int64
+
+      - name: chief_executive_name
+        data_type: string
+
+      - name: chief_executive_title
+        data_type: string
+
+      - name: general_telephone
+        data_type: string
+
+      - name: employer_identification_number
+        data_type: int64
+
+      - name: duns_number
+        data_type: string
+
+      - name: ueis_number
+        data_type: string
+
+      - name: ope_id
+        data_type: int64
+
+      - name: ope_flag
+        data_type: int64
+
+      - name: website_address
+        data_type: string
+
+      - name: admin_url
+        data_type: string
+
+      - name: financial_aid_url
+        data_type: string
+
+      - name: application_url
+        data_type: string
+
+      - name: net_price_url
+        data_type: string
+
+      - name: veteran_url
+        data_type: string
+
+      - name: athletics_url
+        data_type: string
+
+      - name: disability_url
+        data_type: string
+
+      - name: sector_code
+        data_type: int64
+
+      - name: institution_control_level
+        data_type: int64
+
+      - name: control_code
+        data_type: int64
+
+      - name: high_level_offering
+        data_type: int64
+
+      - name: undergraduate_offering
+        data_type: int64
+
+      - name: graduate_offering
+        data_type: int64
+
+      - name: highest_degree_offered
+        data_type: int64
+
+      - name: degree_granting
+        data_type: int64
+
+      - name: historically_black_college_university
+        data_type: int64
+
+      - name: hospital_code
+        data_type: int64
+
+      - name: medical_school
+        data_type: int64
+
+      - name: tribal_college
+        data_type: int64
+
+      - name: locale_code
+        data_type: int64
+
+      - name: open_admission_policy
+        data_type: int64
+
+      - name: insitution_status
+        data_type: string
+
+      - name: new_id
+        data_type: int64
+
+      - name: death_year
+        data_type: int64
+
+      - name: close_date
+        data_type: string
+
+      - name: currently_active
+        data_type: int64
+
+      - name: primarily_postsecondary_indicator
+        data_type: int64
+
+      - name: postsecondary_insitution_indicator
+        data_type: int64
+
+      - name: postsecondary_title_iv_indicator
+        data_type: int64
+
+      - name: report_month
+        data_type: int64
+
+      - name: institution_category
+        data_type: int64
+
+      - name: carnegie_2000
+        data_type: int64
+
+      - name: carnegie_2005_2010_basic
+        data_type: int64
+
+      - name: carnegie_2015_basic
+        data_type: int64
+
+      - name: carnegie_2018_basic
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2018_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2018_size_setting
+        data_type: int64
+
+      - name: carnegie_2021_basic
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2021_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2021_size_setting
+        data_type: int64
+
+      - name: carnegie_2025_instructional_composition
+        data_type: int64
+
+      - name: carnegie_2025_size_and_enrollment_categories
+        data_type: int64
+
+      - name: carnegie_2025_research_classification
+        data_type: int64
+
+      - name: carnegie_2025_size
+        data_type: int64
+
+      - name: carnegie_2025_artificial_left_framework
+        data_type: int64
+
+      - name: carnegie_2025_artificial_program_mix
+        data_type: int64
+
+      - name: carnegie_2025_graduate_program_mix
+        data_type: int64
+
+      - name: land_grant_status
+        data_type: int64
+
+      - name: institution_size
+        data_type: int64
+
+      - name: system_type
+        data_type: int64
+
+      - name: system_name
+        data_type: string
+
+      - name: system_code
+        data_type: int64
+
+      - name: core_based_statistical_area_code
+        data_type: int64
+
+      - name: core_based_statistical_area_type
+        data_type: int64
+
+      - name: combined_statistical_area_code
+        data_type: int64
+
+      - name: new_england_city_and_town_area_code
+        data_type: int64
+
+      - name: county_code
+        data_type: int64
+
+      - name: county_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: congressional_district_code
+        data_type: int64
+
+      - name: longitude
+        data_type: float64
+
+      - name: latitude
+        data_type: float64
+
+      - name: data_feedback_report_comparison_group_id
+        data_type: int64
+
+      - name: data_feedback_report_institution_submitted_group_id
+        data_type: int64
+
+  - name: stg_raw__hd2023
+    description: "IPEDS Institutional Characteristics Data for 2023"
+    columns:
+      - name: survey_year
+        data_type: int64
+
+      - name: institution_id
+        data_type: int64
+
+      - name: institution_name
+        data_type: string
+
+      - name: institution_alias
+        data_type: string
+
+      - name: address
+        data_type: string
+
+      - name: city
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: zip_code
+        data_type: string
+
+      - name: fips_code
+        data_type: int64
+
+      - name: bureau_of_economic_analysis_region
+        data_type: int64
+
+      - name: chief_executive_name
+        data_type: string
+
+      - name: chief_executive_title
+        data_type: string
+
+      - name: general_telephone
+        data_type: string
+
+      - name: employer_identification_number
+        data_type: int64
+
+      - name: duns_number
+        data_type: string
+
+      - name: ueis_number
+        data_type: string
+
+      - name: ope_id
+        data_type: int64
+
+      - name: ope_flag
+        data_type: int64
+
+      - name: website_address
+        data_type: string
+
+      - name: admin_url
+        data_type: string
+
+      - name: financial_aid_url
+        data_type: string
+
+      - name: application_url
+        data_type: string
+
+      - name: net_price_url
+        data_type: string
+
+      - name: veteran_url
+        data_type: string
+
+      - name: athletics_url
+        data_type: string
+
+      - name: disability_url
+        data_type: string
+
+      - name: sector_code
+        data_type: int64
+
+      - name: institution_control_level
+        data_type: int64
+
+      - name: control_code
+        data_type: int64
+
+      - name: high_level_offering
+        data_type: int64
+
+      - name: undergraduate_offering
+        data_type: int64
+
+      - name: graduate_offering
+        data_type: int64
+
+      - name: highest_degree_offered
+        data_type: int64
+
+      - name: degree_granting
+        data_type: int64
+
+      - name: historically_black_college_university
+        data_type: int64
+
+      - name: hospital_code
+        data_type: int64
+
+      - name: medical_school
+        data_type: int64
+
+      - name: tribal_college
+        data_type: int64
+
+      - name: locale_code
+        data_type: int64
+
+      - name: open_admission_policy
+        data_type: int64
+
+      - name: insitution_status
+        data_type: string
+
+      - name: new_id
+        data_type: int64
+
+      - name: death_year
+        data_type: int64
+
+      - name: close_date
+        data_type: string
+
+      - name: currently_active
+        data_type: int64
+
+      - name: primarily_postsecondary_indicator
+        data_type: int64
+
+      - name: postsecondary_insitution_indicator
+        data_type: int64
+
+      - name: postsecondary_title_iv_indicator
+        data_type: int64
+
+      - name: report_month
+        data_type: int64
+
+      - name: institution_category
+        data_type: int64
+
+      - name: carnegie_2000
+        data_type: int64
+
+      - name: carnegie_2005_2010_basic
+        data_type: int64
+
+      - name: carnegie_2015_basic
+        data_type: int64
+
+      - name: carnegie_2018_basic
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2018_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2018_size_setting
+        data_type: int64
+
+      - name: carnegie_2021_basic
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2021_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2021_size_setting
+        data_type: int64
+
+      - name: carnegie_2025_instructional_composition
+        data_type: int64
+
+      - name: carnegie_2025_size_and_enrollment_categories
+        data_type: int64
+
+      - name: carnegie_2025_research_classification
+        data_type: int64
+
+      - name: carnegie_2025_size
+        data_type: int64
+
+      - name: carnegie_2025_artificial_left_framework
+        data_type: int64
+
+      - name: carnegie_2025_artificial_program_mix
+        data_type: int64
+
+      - name: carnegie_2025_graduate_program_mix
+        data_type: int64
+
+      - name: land_grant_status
+        data_type: int64
+
+      - name: institution_size
+        data_type: int64
+
+      - name: system_type
+        data_type: int64
+
+      - name: system_name
+        data_type: string
+
+      - name: system_code
+        data_type: int64
+
+      - name: core_based_statistical_area_code
+        data_type: int64
+
+      - name: core_based_statistical_area_type
+        data_type: int64
+
+      - name: combined_statistical_area_code
+        data_type: int64
+
+      - name: new_england_city_and_town_area_code
+        data_type: int64
+
+      - name: county_code
+        data_type: int64
+
+      - name: county_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: congressional_district_code
+        data_type: int64
+
+      - name: longitude
+        data_type: float64
+
+      - name: latitude
+        data_type: float64
+
+      - name: data_feedback_report_comparison_group_id
+        data_type: int64
+
+      - name: data_feedback_report_institution_submitted_group_id
+        data_type: int64
+
+  - name: stg_raw__hd2024
+    description: "IPEDS Institutional Characteristics Data for 2024"
+    columns:
+      - name: survey_year
+        data_type: int64
+
+      - name: institution_id
+        data_type: int64
+
+      - name: institution_name
+        data_type: string
+
+      - name: institution_alias
+        data_type: string
+
+      - name: address
+        data_type: string
+
+      - name: city
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: zip_code
+        data_type: string
+
+      - name: fips_code
+        data_type: int64
+
+      - name: bureau_of_economic_analysis_region
+        data_type: int64
+
+      - name: chief_executive_name
+        data_type: string
+
+      - name: chief_executive_title
+        data_type: string
+
+      - name: general_telephone
+        data_type: string
+
+      - name: employer_identification_number
+        data_type: int64
+
+      - name: duns_number
+        data_type: string
+
+      - name: ueis_number
+        data_type: string
+
+      - name: ope_id
+        data_type: int64
+
+      - name: ope_flag
+        data_type: int64
+
+      - name: website_address
+        data_type: string
+
+      - name: admin_url
+        data_type: string
+
+      - name: financial_aid_url
+        data_type: string
+
+      - name: application_url
+        data_type: string
+
+      - name: net_price_url
+        data_type: string
+
+      - name: veteran_url
+        data_type: string
+
+      - name: athletics_url
+        data_type: string
+
+      - name: disability_url
+        data_type: string
+
+      - name: sector_code
+        data_type: int64
+
+      - name: institution_control_level
+        data_type: int64
+
+      - name: control_code
+        data_type: int64
+
+      - name: high_level_offering
+        data_type: int64
+
+      - name: undergraduate_offering
+        data_type: int64
+
+      - name: graduate_offering
+        data_type: int64
+
+      - name: highest_degree_offered
+        data_type: int64
+
+      - name: degree_granting
+        data_type: int64
+
+      - name: historically_black_college_university
+        data_type: int64
+
+      - name: hospital_code
+        data_type: int64
+
+      - name: medical_school
+        data_type: int64
+
+      - name: tribal_college
+        data_type: int64
+
+      - name: locale_code
+        data_type: int64
+
+      - name: open_admission_policy
+        data_type: int64
+
+      - name: insitution_status
+        data_type: string
+
+      - name: new_id
+        data_type: int64
+
+      - name: death_year
+        data_type: int64
+
+      - name: close_date
+        data_type: string
+
+      - name: currently_active
+        data_type: int64
+
+      - name: primarily_postsecondary_indicator
+        data_type: int64
+
+      - name: postsecondary_insitution_indicator
+        data_type: int64
+
+      - name: postsecondary_title_iv_indicator
+        data_type: int64
+
+      - name: report_month
+        data_type: int64
+
+      - name: institution_category
+        data_type: int64
+
+      - name: carnegie_2000
+        data_type: int64
+
+      - name: carnegie_2005_2010_basic
+        data_type: int64
+
+      - name: carnegie_2015_basic
+        data_type: int64
+
+      - name: carnegie_2018_basic
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2018_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2018_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2018_size_setting
+        data_type: int64
+
+      - name: carnegie_2021_basic
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_grad_instructional_program
+        data_type: int64
+
+      - name: carnegie_2021_undergrad_profile
+        data_type: int64
+
+      - name: carnegie_2021_enrollment_profile
+        data_type: int64
+
+      - name: carnegie_2021_size_setting
+        data_type: int64
+
+      - name: carnegie_2025_instructional_composition
+        data_type: int64
+
+      - name: carnegie_2025_size_and_enrollment_categories
+        data_type: int64
+
+      - name: carnegie_2025_research_classification
+        data_type: int64
+
+      - name: carnegie_2025_size
+        data_type: int64
+
+      - name: carnegie_2025_artificial_left_framework
+        data_type: int64
+
+      - name: carnegie_2025_artificial_program_mix
+        data_type: int64
+
+      - name: carnegie_2025_graduate_program_mix
+        data_type: int64
+
+      - name: land_grant_status
+        data_type: int64
+
+      - name: institution_size
+        data_type: int64
+
+      - name: system_type
+        data_type: int64
+
+      - name: system_name
+        data_type: string
+
+      - name: system_code
+        data_type: int64
+
+      - name: core_based_statistical_area_code
+        data_type: int64
+
+      - name: core_based_statistical_area_type
+        data_type: int64
+
+      - name: combined_statistical_area_code
+        data_type: int64
+
+      - name: new_england_city_and_town_area_code
+        data_type: int64
+
+      - name: county_code
+        data_type: int64
+
+      - name: county_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: congressional_district_code
+        data_type: int64
+
+      - name: longitude
+        data_type: float64
+
+      - name: latitude
+        data_type: float64
+
+      - name: data_feedback_report_comparison_group_id
+        data_type: int64
+
+      - name: data_feedback_report_institution_submitted_group_id
+        data_type: int64

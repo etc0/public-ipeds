@@ -1,0 +1,1 @@
+{{ test_unique(column_name="cipcode", model=get_where_subquery(ref('stg_seed__cip_codes'))) }}

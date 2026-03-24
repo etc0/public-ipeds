@@ -1,0 +1,6 @@
+{
+    "dbt.projectsDir": "${workspaceFolder}/dbt",
+    "dbt.profilesDir": "${env:HOME}/.dbt",
+    "python.terminal.useEnvFile": true,
+    "python.envFile": "${workspaceFolder}/.env"
+}

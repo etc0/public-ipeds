@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="awlevel_code", model=get_where_subquery(source('raw', 'award_level_codes'))) }}

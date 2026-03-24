@@ -1,0 +1,4 @@
+chardet
+google-cloud-bigquery
+pandas
+requests

@@ -1,0 +1,266 @@
+version: 2
+
+models:
+  - name: dim_award_levels
+    description: "Dimension of institutional award levels"
+    columns:
+      - name: award_level
+        data_type: int64
+        constraints:
+          - type: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: award_level_description
+        data_type: string
+
+      - name: award_level_category
+        data_type: string
+
+  - name: dim_cip_codes
+    description: "Dimension of IPEDS CIP codes"
+    columns:
+      - name: cip_code
+        data_type: string
+        constraints:
+          - type: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: cip_title
+        data_type: string
+
+      - name: cip_family_title
+        data_type: string
+
+      - name: is_stem
+        data_type: boolean
+
+  - name: dim_institutions
+    description: "Dimension of institutional characteristics by IPEDS survey year"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - survey_year
+              - institution_id
+    columns:
+      - name: institution_key
+        data_type: string
+        constraints:
+          - type: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: survey_year
+        data_type: int64
+
+      - name: institution_id
+        data_type: int64
+
+      - name: institution_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+  - name: dim_survey_years
+    description: "Dimension of IPEDS survey years"
+    columns:
+      - name: survey_year
+        data_type: int64
+        constraints:
+          - type: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: academic_year
+        data_type: string
+
+  - name: fct_completions
+    description: "Fact containing student completions by institution, survey year, CIP code, and award level."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - survey_year
+              - institution_id
+              - cip_code
+              - award_level
+    columns:
+      - name: completion_key
+        description: "Fact table surrogate key and primary key"
+        data_type: string
+        constraints:
+          - type: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: institution_key
+        description: "Surrogate key to dim_institutions"
+        data_type: string
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_institutions')
+                field: institution_key
+
+      - name: survey_year
+        description: "Key to dim_survey_years"
+        data_type: string
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_survey_years')
+                field: survey_year
+
+      - name: institution_id
+        description: "ID of the institution"
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: cip_code
+        description: "Key to dim_cip_codes"
+        data_type: string
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_cip_codes')
+                field: cip_code
+
+      - name: award_level
+        description: "Key to dim_award_levels"
+        data_type: int64
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_award_levels')
+                field: award_level
+
+      - name: total_completions
+        data_type: int64
+
+      - name: male_completions
+        data_type: int64
+
+      - name: female_completions
+        data_type: int64
+
+  - name: obt_completions_yoy_by_state
+    description: "One big table of yearly student completions by state, and their year-over-year changes and growth rate percentages."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - survey_year
+              - state_abbreviation
+    columns:
+      - name: survey_year
+        data_type: int64
+
+      - name: academic_year
+        data_type: string
+
+      - name: prior_academic_year
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: state_completions
+        data_type: int64
+
+      - name: prior_year_state_completions
+        data_type: int64
+
+      - name: yoy_change
+        data_type: int64
+
+      - name: yoy_growth_rate_pct
+        data_type: float64
+
+  - name: obt_completions
+    description: "One big table of student completions by years, institutions, CIP codes, and award levels."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - survey_year
+              - institution_id
+              - cip_code
+              - award_level
+    columns:
+      - name: survey_year
+        data_type: int64
+        tests:
+          - not_null
+
+      - name: academic_year
+        data_type: string
+
+      - name: institution_id
+        data_type: string
+        tests:
+          - not_null
+
+      - name: institution_name
+        data_type: string
+
+      - name: state_county
+        data_type: string
+
+      - name: state_abbreviation
+        data_type: string
+
+      - name: cip_code
+        data_type: string
+        tests:
+          - not_null
+
+      - name: cip_title
+        data_type: string
+
+      - name: cip_family_title
+        data_type: string
+
+      - name: is_stem
+        data_type: string
+
+      - name: award_level
+        data_type: string
+        tests:
+          - not_null
+
+      - name: award_level_description
+        data_type: string
+
+      - name: award_level_category
+        data_type: string
+
+      - name: total_completions
+        data_type: int64
+
+      - name: male_completions
+        data_type: int64
+
+      - name: female_completions
+        data_type: int64
+
+      - name: completion_key
+        data_type: string
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,7 @@
+# models/schema.yml or seeds/schema.yml
+seeds:
+  - name: cipcode2020
+    config:
+      column_types:
+        CIPFamily: STRING
+        CIPCode: STRING

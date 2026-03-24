@@ -1,0 +1,1 @@
+{{ test_unique(column_name="unitid", model=get_where_subquery(source('raw', 'hd2024'))) }}

@@ -1,0 +1,1 @@
+{{ dbt_utils.test_unique_combination_of_columns(combination_of_columns=["unitid","cipcode","majornum","awlevel"], model=get_where_subquery(source('raw', 'c2020_a'))) }}

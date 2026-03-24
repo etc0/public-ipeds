@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="award_level_description", model=get_where_subquery(ref('obt_completions'))) }}

@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="cip_code", model=get_where_subquery(ref('obt_completions'))) }}

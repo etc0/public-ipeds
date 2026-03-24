@@ -1,0 +1,1 @@
+{{ test_unique(column_name="survey_year", model=get_where_subquery(source('raw', 'ipeds_survey_years'))) }}

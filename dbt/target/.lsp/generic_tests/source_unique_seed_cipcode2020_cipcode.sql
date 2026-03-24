@@ -1,0 +1,1 @@
+{{ test_unique(column_name="cipcode", model=get_where_subquery(source('seed', 'cipcode2020'))) }}

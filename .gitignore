@@ -1,0 +1,9 @@
+# Working directories
+.venv/
+.vscode/
+ingestion/data/**
+logs/
+
+# Pre-commit files, scripts, logs
+.pre-commit-config.yaml
+pre-commit-check*

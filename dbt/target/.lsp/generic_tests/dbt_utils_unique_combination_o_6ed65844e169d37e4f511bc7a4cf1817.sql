@@ -1,0 +1,1 @@
+{{ dbt_utils.test_unique_combination_of_columns(combination_of_columns=["survey_year","institution_id"], model=get_where_subquery(ref('int_institutions_by_year'))) }}

@@ -1,0 +1,16 @@
+name: public_ipeds
+config-version: 2
+
+version: '1.0.0'
+profile: public_ipeds
+
+macro-paths: ["macros"]
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  +materialized: view
+  
+  public_ipeds:
+    marts:
+      +materialized: table

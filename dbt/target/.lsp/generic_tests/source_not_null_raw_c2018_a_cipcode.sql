@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="cipcode", model=get_where_subquery(source('raw', 'c2018_a'))) }}

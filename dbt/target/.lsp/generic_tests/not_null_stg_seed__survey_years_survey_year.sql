@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="survey_year", model=get_where_subquery(ref('stg_seed__survey_years'))) }}

@@ -1,0 +1,2097 @@
+version: 2
+
+sources:
+ - name: raw
+   tables:             
+     - name: c2018_a
+       tests:
+         - dbt_utils.unique_combination_of_columns:
+             arguments:
+               combination_of_columns:
+                 - unitid
+                 - cipcode
+                 - majornum
+                 - awlevel
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null
+         - name: cipcode
+           data_type: string
+           tests:
+             - not_null 
+         - name: majornum
+           data_type: int64
+           tests:
+             - not_null 
+         - name: awlevel
+           data_type: int64
+           tests:
+             - not_null 
+         - name: xctotalt
+           data_type: string
+         - name: ctotalt
+           data_type: int64
+         - name: xctotalm
+           data_type: string
+         - name: ctotalm
+           data_type: int64
+         - name: xctotalw
+           data_type: string
+         - name: ctotalw
+           data_type: int64
+         - name: xcaiant
+           data_type: string
+         - name: caiant
+           data_type: int64
+         - name: xcaianm
+           data_type: string
+         - name: caianm
+           data_type: int64
+         - name: xcaianw
+           data_type: string
+         - name: caianw
+           data_type: int64
+         - name: xcasiat
+           data_type: string
+         - name: casiat
+           data_type: int64
+         - name: xcasiam
+           data_type: string
+         - name: casiam
+           data_type: int64
+         - name: xcasiaw
+           data_type: string
+         - name: casiaw
+           data_type: int64
+         - name: xcbkaat
+           data_type: string
+         - name: cbkaat
+           data_type: int64
+         - name: xcbkaam
+           data_type: string
+         - name: cbkaam
+           data_type: int64
+         - name: xcbkaaw
+           data_type: string
+         - name: cbkaaw
+           data_type: int64
+         - name: xchispt
+           data_type: string
+         - name: chispt
+           data_type: int64
+         - name: xchispm
+           data_type: string
+         - name: chispm
+           data_type: int64
+         - name: xchispw
+           data_type: string
+         - name: chispw
+           data_type: int64
+         - name: xcnhpit
+           data_type: string
+         - name: cnhpit
+           data_type: int64
+         - name: xcnhpim
+           data_type: string
+         - name: cnhpim
+           data_type: int64
+         - name: xcnhpiw
+           data_type: string
+         - name: cnhpiw
+           data_type: int64
+         - name: xcwhitt
+           data_type: string
+         - name: cwhitt
+           data_type: int64
+         - name: xcwhitm
+           data_type: string
+         - name: cwhitm
+           data_type: int64
+         - name: xcwhitw
+           data_type: string
+         - name: cwhitw
+           data_type: int64
+         - name: xc2mort
+           data_type: string
+         - name: c2mort
+           data_type: int64
+         - name: xc2morm
+           data_type: string
+         - name: c2morm
+           data_type: int64
+         - name: xc2morw
+           data_type: string
+         - name: c2morw
+           data_type: int64
+         - name: xcunknt
+           data_type: string
+         - name: cunknt
+           data_type: int64
+         - name: xcunknm
+           data_type: string
+         - name: cunknm
+           data_type: int64
+         - name: xcunknw
+           data_type: string
+         - name: cunknw
+           data_type: int64
+         - name: xcnralt
+           data_type: string
+         - name: cnralt
+           data_type: int64
+         - name: xcnralm
+           data_type: string
+         - name: cnralm
+           data_type: int64
+         - name: xcnralw
+           data_type: string
+         - name: cnralw  
+           data_type: int64
+
+     - name: c2019_a
+       tests:
+         - dbt_utils.unique_combination_of_columns:
+             arguments:
+               combination_of_columns:
+                 - unitid
+                 - cipcode
+                 - majornum
+                 - awlevel
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+         - name: cipcode
+           data_type: string
+           tests:
+             - not_null 
+         - name: majornum
+           data_type: int64
+           tests:
+             - not_null 
+         - name: awlevel
+           data_type: int64
+           tests:
+             - not_null 
+         - name: xctotalt
+           data_type: string
+         - name: ctotalt
+           data_type: int64
+         - name: xctotalm
+           data_type: string
+         - name: ctotalm
+           data_type: int64
+         - name: xctotalw
+           data_type: string
+         - name: ctotalw
+           data_type: int64
+         - name: xcaiant
+           data_type: string
+         - name: caiant
+           data_type: int64
+         - name: xcaianm
+           data_type: string
+         - name: caianm
+           data_type: int64
+         - name: xcaianw
+           data_type: string
+         - name: caianw
+           data_type: int64
+         - name: xcasiat
+           data_type: string
+         - name: casiat
+           data_type: int64
+         - name: xcasiam
+           data_type: string
+         - name: casiam
+           data_type: int64
+         - name: xcasiaw
+           data_type: string
+         - name: casiaw
+           data_type: int64
+         - name: xcbkaat
+           data_type: string
+         - name: cbkaat
+           data_type: int64
+         - name: xcbkaam
+           data_type: string
+         - name: cbkaam
+           data_type: int64
+         - name: xcbkaaw
+           data_type: string
+         - name: cbkaaw
+           data_type: int64
+         - name: xchispt
+           data_type: string
+         - name: chispt
+           data_type: int64
+         - name: xchispm
+           data_type: string
+         - name: chispm
+           data_type: int64
+         - name: xchispw
+           data_type: string
+         - name: chispw
+           data_type: int64
+         - name: xcnhpit
+           data_type: string
+         - name: cnhpit
+           data_type: int64
+         - name: xcnhpim
+           data_type: string
+         - name: cnhpim
+           data_type: int64
+         - name: xcnhpiw
+           data_type: string
+         - name: cnhpiw
+           data_type: int64
+         - name: xcwhitt
+           data_type: string
+         - name: cwhitt
+           data_type: int64
+         - name: xcwhitm
+           data_type: string
+         - name: cwhitm
+           data_type: int64
+         - name: xcwhitw
+           data_type: string
+         - name: cwhitw
+           data_type: int64
+         - name: xc2mort
+           data_type: string
+         - name: c2mort
+           data_type: int64
+         - name: xc2morm
+           data_type: string
+         - name: c2morm
+           data_type: int64
+         - name: xc2morw
+           data_type: string
+         - name: c2morw
+           data_type: int64
+         - name: xcunknt
+           data_type: string
+         - name: cunknt
+           data_type: int64
+         - name: xcunknm
+           data_type: string
+         - name: cunknm
+           data_type: int64
+         - name: xcunknw
+           data_type: string
+         - name: cunknw
+           data_type: int64
+         - name: xcnralt
+           data_type: string
+         - name: cnralt
+           data_type: int64
+         - name: xcnralm
+           data_type: string
+         - name: cnralm
+           data_type: int64
+         - name: xcnralw
+           data_type: string
+         - name: cnralw  
+           data_type: int64
+
+     - name: c2020_a
+       tests:
+         - dbt_utils.unique_combination_of_columns:
+             arguments:
+               combination_of_columns:
+                 - unitid
+                 - cipcode
+                 - majornum
+                 - awlevel
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+         - name: cipcode
+           data_type: string
+           tests:
+             - not_null 
+         - name: majornum
+           data_type: int64
+           tests:
+             - not_null 
+         - name: awlevel
+           data_type: int64
+           tests:
+             - not_null 
+         - name: xctotalt
+           data_type: string
+         - name: ctotalt
+           data_type: int64
+         - name: xctotalm
+           data_type: string
+         - name: ctotalm
+           data_type: int64
+         - name: xctotalw
+           data_type: string
+         - name: ctotalw
+           data_type: int64
+         - name: xcaiant
+           data_type: string
+         - name: caiant
+           data_type: int64
+         - name: xcaianm
+           data_type: string
+         - name: caianm
+           data_type: int64
+         - name: xcaianw
+           data_type: string
+         - name: caianw
+           data_type: int64
+         - name: xcasiat
+           data_type: string
+         - name: casiat
+           data_type: int64
+         - name: xcasiam
+           data_type: string
+         - name: casiam
+           data_type: int64
+         - name: xcasiaw
+           data_type: string
+         - name: casiaw
+           data_type: int64
+         - name: xcbkaat
+           data_type: string
+         - name: cbkaat
+           data_type: int64
+         - name: xcbkaam
+           data_type: string
+         - name: cbkaam
+           data_type: int64
+         - name: xcbkaaw
+           data_type: string
+         - name: cbkaaw
+           data_type: int64
+         - name: xchispt
+           data_type: string
+         - name: chispt
+           data_type: int64
+         - name: xchispm
+           data_type: string
+         - name: chispm
+           data_type: int64
+         - name: xchispw
+           data_type: string
+         - name: chispw
+           data_type: int64
+         - name: xcnhpit
+           data_type: string
+         - name: cnhpit
+           data_type: int64
+         - name: xcnhpim
+           data_type: string
+         - name: cnhpim
+           data_type: int64
+         - name: xcnhpiw
+           data_type: string
+         - name: cnhpiw
+           data_type: int64
+         - name: xcwhitt
+           data_type: string
+         - name: cwhitt
+           data_type: int64
+         - name: xcwhitm
+           data_type: string
+         - name: cwhitm
+           data_type: int64
+         - name: xcwhitw
+           data_type: string
+         - name: cwhitw
+           data_type: int64
+         - name: xc2mort
+           data_type: string
+         - name: c2mort
+           data_type: int64
+         - name: xc2morm
+           data_type: string
+         - name: c2morm
+           data_type: int64
+         - name: xc2morw
+           data_type: string
+         - name: c2morw
+           data_type: int64
+         - name: xcunknt
+           data_type: string
+         - name: cunknt
+           data_type: int64
+         - name: xcunknm
+           data_type: string
+         - name: cunknm
+           data_type: int64
+         - name: xcunknw
+           data_type: string
+         - name: cunknw
+           data_type: int64
+         - name: xcnralt
+           data_type: string
+         - name: cnralt
+           data_type: int64
+         - name: xcnralm
+           data_type: string
+         - name: cnralm
+           data_type: int64
+         - name: xcnralw
+           data_type: string
+         - name: cnralw  
+           data_type: int64
+
+     - name: c2021_a
+       tests:
+         - dbt_utils.unique_combination_of_columns:
+             arguments:
+               combination_of_columns:
+                 - unitid
+                 - cipcode
+                 - majornum
+                 - awlevel
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+         - name: cipcode
+           data_type: string
+           tests:
+             - not_null 
+         - name: majornum
+           data_type: int64
+           tests:
+             - not_null 
+         - name: awlevel
+           data_type: int64
+           tests:
+             - not_null 
+         - name: xctotalt
+           data_type: string
+         - name: ctotalt
+           data_type: int64
+         - name: xctotalm
+           data_type: string
+         - name: ctotalm
+           data_type: int64
+         - name: xctotalw
+           data_type: string
+         - name: ctotalw
+           data_type: int64
+         - name: xcaiant
+           data_type: string
+         - name: caiant
+           data_type: int64
+         - name: xcaianm
+           data_type: string
+         - name: caianm
+           data_type: int64
+         - name: xcaianw
+           data_type: string
+         - name: caianw
+           data_type: int64
+         - name: xcasiat
+           data_type: string
+         - name: casiat
+           data_type: int64
+         - name: xcasiam
+           data_type: string
+         - name: casiam
+           data_type: int64
+         - name: xcasiaw
+           data_type: string
+         - name: casiaw
+           data_type: int64
+         - name: xcbkaat
+           data_type: string
+         - name: cbkaat
+           data_type: int64
+         - name: xcbkaam
+           data_type: string
+         - name: cbkaam
+           data_type: int64
+         - name: xcbkaaw
+           data_type: string
+         - name: cbkaaw
+           data_type: int64
+         - name: xchispt
+           data_type: string
+         - name: chispt
+           data_type: int64
+         - name: xchispm
+           data_type: string
+         - name: chispm
+           data_type: int64
+         - name: xchispw
+           data_type: string
+         - name: chispw
+           data_type: int64
+         - name: xcnhpit
+           data_type: string
+         - name: cnhpit
+           data_type: int64
+         - name: xcnhpim
+           data_type: string
+         - name: cnhpim
+           data_type: int64
+         - name: xcnhpiw
+           data_type: string
+         - name: cnhpiw
+           data_type: int64
+         - name: xcwhitt
+           data_type: string
+         - name: cwhitt
+           data_type: int64
+         - name: xcwhitm
+           data_type: string
+         - name: cwhitm
+           data_type: int64
+         - name: xcwhitw
+           data_type: string
+         - name: cwhitw
+           data_type: int64
+         - name: xc2mort
+           data_type: string
+         - name: c2mort
+           data_type: int64
+         - name: xc2morm
+           data_type: string
+         - name: c2morm
+           data_type: int64
+         - name: xc2morw
+           data_type: string
+         - name: c2morw
+           data_type: int64
+         - name: xcunknt
+           data_type: string
+         - name: cunknt
+           data_type: int64
+         - name: xcunknm
+           data_type: string
+         - name: cunknm
+           data_type: int64
+         - name: xcunknw
+           data_type: string
+         - name: cunknw
+           data_type: int64
+         - name: xcnralt
+           data_type: string
+         - name: cnralt
+           data_type: int64
+         - name: xcnralm
+           data_type: string
+         - name: cnralm
+           data_type: int64
+         - name: xcnralw
+           data_type: string
+         - name: cnralw  
+           data_type: int64
+
+     - name: c2022_a
+       tests:
+         - dbt_utils.unique_combination_of_columns:
+             arguments:
+               combination_of_columns:
+                 - unitid
+                 - cipcode
+                 - majornum
+                 - awlevel
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+         - name: cipcode
+           data_type: string
+           tests:
+             - not_null 
+         - name: majornum
+           data_type: int64
+           tests:
+             - not_null 
+         - name: awlevel
+           data_type: int64
+           tests:
+             - not_null 
+         - name: xctotalt
+           data_type: string
+         - name: ctotalt
+           data_type: int64
+         - name: xctotalm
+           data_type: string
+         - name: ctotalm
+           data_type: int64
+         - name: xctotalw
+           data_type: string
+         - name: ctotalw
+           data_type: int64
+         - name: xcaiant
+           data_type: string
+         - name: caiant
+           data_type: int64
+         - name: xcaianm
+           data_type: string
+         - name: caianm
+           data_type: int64
+         - name: xcaianw
+           data_type: string
+         - name: caianw
+           data_type: int64
+         - name: xcasiat
+           data_type: string
+         - name: casiat
+           data_type: int64
+         - name: xcasiam
+           data_type: string
+         - name: casiam
+           data_type: int64
+         - name: xcasiaw
+           data_type: string
+         - name: casiaw
+           data_type: int64
+         - name: xcbkaat
+           data_type: string
+         - name: cbkaat
+           data_type: int64
+         - name: xcbkaam
+           data_type: string
+         - name: cbkaam
+           data_type: int64
+         - name: xcbkaaw
+           data_type: string
+         - name: cbkaaw
+           data_type: int64
+         - name: xchispt
+           data_type: string
+         - name: chispt
+           data_type: int64
+         - name: xchispm
+           data_type: string
+         - name: chispm
+           data_type: int64
+         - name: xchispw
+           data_type: string
+         - name: chispw
+           data_type: int64
+         - name: xcnhpit
+           data_type: string
+         - name: cnhpit
+           data_type: int64
+         - name: xcnhpim
+           data_type: string
+         - name: cnhpim
+           data_type: int64
+         - name: xcnhpiw
+           data_type: string
+         - name: cnhpiw
+           data_type: int64
+         - name: xcwhitt
+           data_type: string
+         - name: cwhitt
+           data_type: int64
+         - name: xcwhitm
+           data_type: string
+         - name: cwhitm
+           data_type: int64
+         - name: xcwhitw
+           data_type: string
+         - name: cwhitw
+           data_type: int64
+         - name: xc2mort
+           data_type: string
+         - name: c2mort
+           data_type: int64
+         - name: xc2morm
+           data_type: string
+         - name: c2morm
+           data_type: int64
+         - name: xc2morw
+           data_type: string
+         - name: c2morw
+           data_type: int64
+         - name: xcunknt
+           data_type: string
+         - name: cunknt
+           data_type: int64
+         - name: xcunknm
+           data_type: string
+         - name: cunknm
+           data_type: int64
+         - name: xcunknw
+           data_type: string
+         - name: cunknw
+           data_type: int64
+         - name: xcnralt
+           data_type: string
+         - name: cnralt
+           data_type: int64
+         - name: xcnralm
+           data_type: string
+         - name: cnralm
+           data_type: int64
+         - name: xcnralw
+           data_type: string
+         - name: cnralw  
+           data_type: int64
+
+     - name: c2023_a
+       tests:
+         - dbt_utils.unique_combination_of_columns:
+             arguments:
+               combination_of_columns:
+                 - unitid
+                 - cipcode
+                 - majornum
+                 - awlevel
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+         - name: cipcode
+           data_type: string
+           tests:
+             - not_null 
+         - name: majornum
+           data_type: int64
+           tests:
+             - not_null 
+         - name: awlevel
+           data_type: int64
+           tests:
+             - not_null 
+         - name: xctotalt
+           data_type: string
+         - name: ctotalt
+           data_type: int64
+         - name: xctotalm
+           data_type: string
+         - name: ctotalm
+           data_type: int64
+         - name: xctotalw
+           data_type: string
+         - name: ctotalw
+           data_type: int64
+         - name: xcaiant
+           data_type: string
+         - name: caiant
+           data_type: int64
+         - name: xcaianm
+           data_type: string
+         - name: caianm
+           data_type: int64
+         - name: xcaianw
+           data_type: string
+         - name: caianw
+           data_type: int64
+         - name: xcasiat
+           data_type: string
+         - name: casiat
+           data_type: int64
+         - name: xcasiam
+           data_type: string
+         - name: casiam
+           data_type: int64
+         - name: xcasiaw
+           data_type: string
+         - name: casiaw
+           data_type: int64
+         - name: xcbkaat
+           data_type: string
+         - name: cbkaat
+           data_type: int64
+         - name: xcbkaam
+           data_type: string
+         - name: cbkaam
+           data_type: int64
+         - name: xcbkaaw
+           data_type: string
+         - name: cbkaaw
+           data_type: int64
+         - name: xchispt
+           data_type: string
+         - name: chispt
+           data_type: int64
+         - name: xchispm
+           data_type: string
+         - name: chispm
+           data_type: int64
+         - name: xchispw
+           data_type: string
+         - name: chispw
+           data_type: int64
+         - name: xcnhpit
+           data_type: string
+         - name: cnhpit
+           data_type: int64
+         - name: xcnhpim
+           data_type: string
+         - name: cnhpim
+           data_type: int64
+         - name: xcnhpiw
+           data_type: string
+         - name: cnhpiw
+           data_type: int64
+         - name: xcwhitt
+           data_type: string
+         - name: cwhitt
+           data_type: int64
+         - name: xcwhitm
+           data_type: string
+         - name: cwhitm
+           data_type: int64
+         - name: xcwhitw
+           data_type: string
+         - name: cwhitw
+           data_type: int64
+         - name: xc2mort
+           data_type: string
+         - name: c2mort
+           data_type: int64
+         - name: xc2morm
+           data_type: string
+         - name: c2morm
+           data_type: int64
+         - name: xc2morw
+           data_type: string
+         - name: c2morw
+           data_type: int64
+         - name: xcunknt
+           data_type: string
+         - name: cunknt
+           data_type: int64
+         - name: xcunknm
+           data_type: string
+         - name: cunknm
+           data_type: int64
+         - name: xcunknw
+           data_type: string
+         - name: cunknw
+           data_type: int64
+         - name: xcnralt
+           data_type: string
+         - name: cnralt
+           data_type: int64
+         - name: xcnralm
+           data_type: string
+         - name: cnralm
+           data_type: int64
+         - name: xcnralw
+           data_type: string
+         - name: cnralw
+           data_type: int64
+
+     - name: c2024_a
+       tests:
+         - dbt_utils.unique_combination_of_columns:
+             arguments:
+               combination_of_columns:
+                 - unitid
+                 - cipcode
+                 - majornum
+                 - awlevel
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+         - name: cipcode
+           data_type: string
+           tests:
+             - not_null 
+         - name: majornum
+           data_type: int64
+           tests:
+             - not_null 
+         - name: awlevel
+           data_type: int64
+           tests:
+             - not_null 
+         - name: xctotalt
+           data_type: string
+         - name: ctotalt
+           data_type: int64
+         - name: xctotalm
+           data_type: string
+         - name: ctotalm
+           data_type: int64
+         - name: xctotalw
+           data_type: string
+         - name: ctotalw
+           data_type: int64
+         - name: xcaiant
+           data_type: string
+         - name: caiant
+           data_type: int64
+         - name: xcaianm
+           data_type: string
+         - name: caianm
+           data_type: int64
+         - name: xcaianw
+           data_type: string
+         - name: caianw
+           data_type: int64
+         - name: xcasiat
+           data_type: string
+         - name: casiat
+           data_type: int64
+         - name: xcasiam
+           data_type: string
+         - name: casiam
+           data_type: int64
+         - name: xcasiaw
+           data_type: string
+         - name: casiaw
+           data_type: int64
+         - name: xcbkaat
+           data_type: string
+         - name: cbkaat
+           data_type: int64
+         - name: xcbkaam
+           data_type: string
+         - name: cbkaam
+           data_type: int64
+         - name: xcbkaaw
+           data_type: string
+         - name: cbkaaw
+           data_type: int64
+         - name: xchispt
+           data_type: string
+         - name: chispt
+           data_type: int64
+         - name: xchispm
+           data_type: string
+         - name: chispm
+           data_type: int64
+         - name: xchispw
+           data_type: string
+         - name: chispw
+           data_type: int64
+         - name: xcnhpit
+           data_type: string
+         - name: cnhpit
+           data_type: int64
+         - name: xcnhpim
+           data_type: string
+         - name: cnhpim
+           data_type: int64
+         - name: xcnhpiw
+           data_type: string
+         - name: cnhpiw
+           data_type: int64
+         - name: xcwhitt
+           data_type: string
+         - name: cwhitt
+           data_type: int64
+         - name: xcwhitm
+           data_type: string
+         - name: cwhitm
+           data_type: int64
+         - name: xcwhitw
+           data_type: string
+         - name: cwhitw
+           data_type: int64
+         - name: xc2mort
+           data_type: string
+         - name: c2mort
+           data_type: int64
+         - name: xc2morm
+           data_type: string
+         - name: c2morm
+           data_type: int64
+         - name: xc2morw
+           data_type: string
+         - name: c2morw
+           data_type: int64
+         - name: xcunknt
+           data_type: string
+         - name: cunknt
+           data_type: int64
+         - name: xcunknm
+           data_type: string
+         - name: cunknm
+           data_type: int64
+         - name: xcunknw
+           data_type: string
+         - name: cunknw
+           data_type: int64
+         - name: xcnralt
+           data_type: string
+         - name: cnralt
+           data_type: int64
+         - name: xcnralm
+           data_type: string
+         - name: cnralm
+           data_type: int64
+         - name: xcnralw
+           data_type: string
+         - name: cnralw
+           data_type: int64
+
+     - name: hd2018
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+             - unique
+         - name: instnm
+           data_type: string
+         - name: ialias
+           data_type: string
+         - name: addr
+           data_type: string
+         - name: city
+           data_type: string
+         - name: stabbr
+           data_type: string
+         - name: zip
+           data_type: string
+         - name: fips
+           data_type: int64
+         - name: obereg
+           data_type: int64
+         - name: chfnm
+           data_type: string
+         - name: chftitle
+           data_type: string
+         - name: gentele
+           data_type: string
+         - name: ein
+           data_type: string
+         - name: duns
+           data_type: string
+         - name: opeid
+           data_type: int64
+         - name: opeflag
+           data_type: int64
+         - name: webaddr
+           data_type: string
+         - name: adminurl
+           data_type: string
+         - name: faidurl
+           data_type: string
+         - name: applurl
+           data_type: string
+         - name: npricurl
+           data_type: string
+         - name: veturl
+           data_type: string
+         - name: athurl
+           data_type: string
+         - name: disaurl
+           data_type: string
+         - name: sector
+           data_type: int64
+         - name: iclevel
+           data_type: int64
+         - name: control
+           data_type: int64
+         - name: hloffer
+           data_type: int64
+         - name: ugoffer
+           data_type: int64
+         - name: groffer
+           data_type: int64
+         - name: hdegofr1
+           data_type: int64
+         - name: deggrant
+           data_type: int64
+         - name: hbcu
+           data_type: int64
+         - name: hospital
+           data_type: int64
+         - name: medical
+           data_type: int64
+         - name: tribal
+           data_type: int64
+         - name: locale
+           data_type: int64
+         - name: openpubl
+           data_type: int64
+         - name: act
+           data_type: string
+         - name: newid
+           data_type: int64
+         - name: deathyr
+           data_type: int64
+         - name: closedat
+           data_type: string
+         - name: cyactive
+           data_type: int64
+         - name: postsec
+           data_type: int64
+         - name: pseflag
+           data_type: int64
+         - name: pset4flg
+           data_type: int64
+         - name: rptmth
+           data_type: int64
+         - name: instcat
+           data_type: int64
+         - name: c18basic
+           data_type: int64
+         - name: c18ipug
+           data_type: int64
+         - name: c18ipgrd
+           data_type: int64
+         - name: c18ugprf
+           data_type: int64
+         - name: c18enprf
+           data_type: int64
+         - name: c18szset
+           data_type: int64
+         - name: c15basic
+           data_type: int64
+         - name: ccbasic
+           data_type: int64
+         - name: carnegie
+           data_type: int64
+         - name: landgrnt
+           data_type: int64
+         - name: instsize
+           data_type: int64
+         - name: f1systyp
+           data_type: int64
+         - name: f1sysnam
+           data_type: string
+         - name: f1syscod
+           data_type: string
+         - name: cbsa
+           data_type: int64
+         - name: cbsatype
+           data_type: int64
+         - name: csa
+           data_type: int64
+         - name: necta
+           data_type: int64
+         - name: countycd
+           data_type: int64
+         - name: countynm
+           data_type: string
+         - name: cngdstcd
+           data_type: int64
+         - name: longitud
+           data_type: float64
+         - name: latitude
+           data_type: float64
+         - name: dfrcgid
+           data_type: int64
+         - name: dfrcuscg
+           data_type: int64
+
+     - name: hd2019
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+             - unique
+         - name: instnm
+           data_type: string
+         - name: ialias
+           data_type: string
+         - name: addr
+           data_type: string
+         - name: city
+           data_type: string
+         - name: stabbr
+           data_type: string
+         - name: zip
+           data_type: string
+         - name: fips
+           data_type: int64
+         - name: obereg
+           data_type: int64
+         - name: chfnm
+           data_type: string
+         - name: chftitle
+           data_type: string
+         - name: gentele
+           data_type: string
+         - name: ein
+           data_type: string
+         - name: duns
+           data_type: string
+         - name: opeid
+           data_type: int64
+         - name: opeflag
+           data_type: int64
+         - name: webaddr
+           data_type: string
+         - name: adminurl
+           data_type: string
+         - name: faidurl
+           data_type: string
+         - name: applurl
+           data_type: string
+         - name: npricurl
+           data_type: string
+         - name: veturl
+           data_type: string
+         - name: athurl
+           data_type: string
+         - name: disaurl
+           data_type: string
+         - name: sector
+           data_type: int64
+         - name: iclevel
+           data_type: int64
+         - name: control
+           data_type: int64
+         - name: hloffer
+           data_type: int64
+         - name: ugoffer
+           data_type: int64
+         - name: groffer
+           data_type: int64
+         - name: hdegofr1
+           data_type: int64
+         - name: deggrant
+           data_type: int64
+         - name: hbcu
+           data_type: int64
+         - name: hospital
+           data_type: int64
+         - name: medical
+           data_type: int64
+         - name: tribal
+           data_type: int64
+         - name: locale
+           data_type: int64
+         - name: openpubl
+           data_type: int64
+         - name: act
+           data_type: string
+         - name: newid
+           data_type: int64
+         - name: deathyr
+           data_type: int64
+         - name: closedat
+           data_type: string
+         - name: cyactive
+           data_type: int64
+         - name: postsec
+           data_type: int64
+         - name: pseflag
+           data_type: int64
+         - name: pset4flg
+           data_type: int64
+         - name: rptmth
+           data_type: int64
+         - name: instcat
+           data_type: int64
+         - name: c18basic
+           data_type: int64
+         - name: c18ipug
+           data_type: int64
+         - name: c18ipgrd
+           data_type: int64
+         - name: c18ugprf
+           data_type: int64
+         - name: c18enprf
+           data_type: int64
+         - name: c18szset
+           data_type: int64
+         - name: c15basic
+           data_type: int64
+         - name: ccbasic
+           data_type: int64
+         - name: carnegie
+           data_type: int64
+         - name: landgrnt
+           data_type: int64
+         - name: instsize
+           data_type: int64
+         - name: f1systyp
+           data_type: int64
+         - name: f1sysnam
+           data_type: string
+         - name: f1syscod
+           data_type: string
+         - name: cbsa
+           data_type: int64
+         - name: cbsatype
+           data_type: int64
+         - name: csa
+           data_type: int64
+         - name: necta
+           data_type: int64
+         - name: countycd
+           data_type: int64
+         - name: countynm
+           data_type: string
+         - name: cngdstcd
+           data_type: int64
+         - name: longitud
+           data_type: float64
+         - name: latitude
+           data_type: float64
+         - name: dfrcgid
+           data_type: int64
+         - name: dfrcuscg
+           data_type: int64
+
+     - name: hd2020
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+             - unique
+         - name: instnm
+           data_type: string
+         - name: ialias
+           data_type: string
+         - name: addr
+           data_type: string
+         - name: city
+           data_type: string
+         - name: stabbr
+           data_type: string
+         - name: zip
+           data_type: string
+         - name: fips
+           data_type: int64
+         - name: obereg
+           data_type: int64
+         - name: chfnm
+           data_type: string
+         - name: chftitle
+           data_type: string
+         - name: gentele
+           data_type: string
+         - name: ein
+           data_type: string
+         - name: duns
+           data_type: string
+         - name: opeid
+           data_type: int64
+         - name: opeflag
+           data_type: int64
+         - name: webaddr
+           data_type: string
+         - name: adminurl
+           data_type: string
+         - name: faidurl
+           data_type: string
+         - name: applurl
+           data_type: string
+         - name: npricurl
+           data_type: string
+         - name: veturl
+           data_type: string
+         - name: athurl
+           data_type: string
+         - name: disaurl
+           data_type: string
+         - name: sector
+           data_type: int64
+         - name: iclevel
+           data_type: int64
+         - name: control
+           data_type: int64
+         - name: hloffer
+           data_type: int64
+         - name: ugoffer
+           data_type: int64
+         - name: groffer
+           data_type: int64
+         - name: hdegofr1
+           data_type: int64
+         - name: deggrant
+           data_type: int64
+         - name: hbcu
+           data_type: int64
+         - name: hospital
+           data_type: int64
+         - name: medical
+           data_type: int64
+         - name: tribal
+           data_type: int64
+         - name: locale
+           data_type: int64
+         - name: openpubl
+           data_type: int64
+         - name: act
+           data_type: string
+         - name: newid
+           data_type: int64
+         - name: deathyr
+           data_type: int64
+         - name: closedat
+           data_type: string
+         - name: cyactive
+           data_type: int64
+         - name: postsec
+           data_type: int64
+         - name: pseflag
+           data_type: int64
+         - name: pset4flg
+           data_type: int64
+         - name: rptmth
+           data_type: int64
+         - name: instcat
+           data_type: int64
+         - name: c18basic
+           data_type: int64
+         - name: c18ipug
+           data_type: int64
+         - name: c18ipgrd
+           data_type: int64
+         - name: c18ugprf
+           data_type: int64
+         - name: c18enprf
+           data_type: int64
+         - name: c18szset
+           data_type: int64
+         - name: c15basic
+           data_type: int64
+         - name: ccbasic
+           data_type: int64
+         - name: carnegie
+           data_type: int64
+         - name: landgrnt
+           data_type: int64
+         - name: instsize
+           data_type: int64
+         - name: f1systyp
+           data_type: int64
+         - name: f1sysnam
+           data_type: string
+         - name: f1syscod
+           data_type: string
+         - name: cbsa
+           data_type: int64
+         - name: cbsatype
+           data_type: int64
+         - name: csa
+           data_type: int64
+         - name: necta
+           data_type: int64
+         - name: countycd
+           data_type: int64
+         - name: countynm
+           data_type: string
+         - name: cngdstcd
+           data_type: int64
+         - name: longitud
+           data_type: float64
+         - name: latitude
+           data_type: float64
+         - name: dfrcgid
+           data_type: int64
+         - name: dfrcuscg
+           data_type: int64
+
+     - name: hd2021
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+             - unique
+         - name: instnm
+           data_type: string
+         - name: ialias
+           data_type: string
+         - name: addr
+           data_type: string
+         - name: city
+           data_type: string
+         - name: stabbr
+           data_type: string
+         - name: zip
+           data_type: string
+         - name: fips
+           data_type: int64
+         - name: obereg
+           data_type: int64
+         - name: chfnm
+           data_type: string
+         - name: chftitle
+           data_type: string
+         - name: gentele
+           data_type: string
+         - name: ein
+           data_type: string
+         - name: duns
+           data_type: string
+         - name: opeid
+           data_type: int64
+         - name: opeflag
+           data_type: int64
+         - name: webaddr
+           data_type: string
+         - name: adminurl
+           data_type: string
+         - name: faidurl
+           data_type: string
+         - name: applurl
+           data_type: string
+         - name: npricurl
+           data_type: string
+         - name: veturl
+           data_type: string
+         - name: athurl
+           data_type: string
+         - name: disaurl
+           data_type: string
+         - name: sector
+           data_type: int64
+         - name: iclevel
+           data_type: int64
+         - name: control
+           data_type: int64
+         - name: hloffer
+           data_type: int64
+         - name: ugoffer
+           data_type: int64
+         - name: groffer
+           data_type: int64
+         - name: hdegofr1
+           data_type: int64
+         - name: deggrant
+           data_type: int64
+         - name: hbcu
+           data_type: int64
+         - name: hospital
+           data_type: int64
+         - name: medical
+           data_type: int64
+         - name: tribal
+           data_type: int64
+         - name: locale
+           data_type: int64
+         - name: openpubl
+           data_type: int64
+         - name: act
+           data_type: string
+         - name: newid
+           data_type: int64
+         - name: deathyr
+           data_type: int64
+         - name: closedat
+           data_type: string
+         - name: cyactive
+           data_type: int64
+         - name: postsec
+           data_type: int64
+         - name: pseflag
+           data_type: int64
+         - name: pset4flg
+           data_type: int64
+         - name: rptmth
+           data_type: int64
+         - name: instcat
+           data_type: int64
+         - name: c21basic
+           data_type: int64
+         - name: c21ipug
+           data_type: int64
+         - name: c21ipgrd
+           data_type: int64
+         - name: c21ugprf
+           data_type: int64
+         - name: c21enprf
+           data_type: int64
+         - name: c21szset
+           data_type: int64
+         - name: c18basic
+           data_type: int64
+         - name: c15basic
+           data_type: int64
+         - name: ccbasic
+           data_type: int64
+         - name: carnegie
+           data_type: int64
+         - name: landgrnt
+           data_type: int64
+         - name: instsize
+           data_type: int64
+         - name: f1systyp
+           data_type: int64
+         - name: f1sysnam
+           data_type: string
+         - name: f1syscod
+           data_type: string
+         - name: cbsa
+           data_type: int64
+         - name: cbsatype
+           data_type: int64
+         - name: csa
+           data_type: int64
+         - name: necta
+           data_type: int64
+         - name: countycd
+           data_type: int64
+         - name: countynm
+           data_type: string
+         - name: cngdstcd
+           data_type: int64
+         - name: longitud
+           data_type: float64
+         - name: latitude
+           data_type: float64
+         - name: dfrcgid
+           data_type: int64
+         - name: dfrcuscg
+           data_type: int64
+
+     - name: hd2022
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+             - unique
+         - name: instnm
+           data_type: string
+         - name: ialias
+           data_type: string
+         - name: addr
+           data_type: string
+         - name: city
+           data_type: string
+         - name: stabbr
+           data_type: string
+         - name: zip
+           data_type: string
+         - name: fips
+           data_type: int64
+         - name: obereg
+           data_type: int64
+         - name: chfnm
+           data_type: string
+         - name: chftitle
+           data_type: string
+         - name: gentele
+           data_type: string
+         - name: ein
+           data_type: string
+         - name: ueis
+           data_type: string
+         - name: opeid
+           data_type: int64
+         - name: opeflag
+           data_type: int64
+         - name: webaddr
+           data_type: string
+         - name: adminurl
+           data_type: string
+         - name: faidurl
+           data_type: string
+         - name: applurl
+           data_type: string
+         - name: npricurl
+           data_type: string
+         - name: veturl
+           data_type: string
+         - name: athurl
+           data_type: string
+         - name: disaurl
+           data_type: string
+         - name: sector
+           data_type: int64
+         - name: iclevel
+           data_type: int64
+         - name: control
+           data_type: int64
+         - name: hloffer
+           data_type: int64
+         - name: ugoffer
+           data_type: int64
+         - name: groffer
+           data_type: int64
+         - name: hdegofr1
+           data_type: int64
+         - name: deggrant
+           data_type: int64
+         - name: hbcu
+           data_type: int64
+         - name: hospital
+           data_type: int64
+         - name: medical
+           data_type: int64
+         - name: tribal
+           data_type: int64
+         - name: locale
+           data_type: int64
+         - name: openpubl
+           data_type: int64
+         - name: act
+           data_type: string
+         - name: newid
+           data_type: int64
+         - name: deathyr
+           data_type: int64
+         - name: closedat
+           data_type: string
+         - name: cyactive
+           data_type: int64
+         - name: postsec
+           data_type: int64
+         - name: pseflag
+           data_type: int64
+         - name: pset4flg
+           data_type: int64
+         - name: rptmth
+           data_type: int64
+         - name: instcat
+           data_type: int64
+         - name: c21basic
+           data_type: int64
+         - name: c21ipug
+           data_type: int64
+         - name: c21ipgrd
+           data_type: int64
+         - name: c21ugprf
+           data_type: int64
+         - name: c21enprf
+           data_type: int64
+         - name: c21szset
+           data_type: int64
+         - name: c18basic
+           data_type: int64
+         - name: c15basic
+           data_type: int64
+         - name: ccbasic
+           data_type: int64
+         - name: carnegie
+           data_type: int64
+         - name: landgrnt
+           data_type: int64
+         - name: instsize
+           data_type: int64
+         - name: f1systyp
+           data_type: int64
+         - name: f1sysnam
+           data_type: string
+         - name: f1syscod
+           data_type: string
+         - name: cbsa
+           data_type: int64
+         - name: cbsatype
+           data_type: int64
+         - name: csa
+           data_type: int64
+         - name: countycd
+           data_type: int64
+         - name: countynm
+           data_type: string
+         - name: cngdstcd
+           data_type: int64
+         - name: longitud
+           data_type: float64
+         - name: latitude
+           data_type: float64
+         - name: dfrcgid
+           data_type: int64
+         - name: dfrcuscg
+           data_type: int64
+
+     - name: hd2023
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+             - unique
+         - name: instnm
+           data_type: string
+         - name: ialias
+           data_type: string
+         - name: addr
+           data_type: string
+         - name: city
+           data_type: string
+         - name: stabbr
+           data_type: string
+         - name: zip
+           data_type: string
+         - name: fips
+           data_type: int64
+         - name: obereg
+           data_type: int64
+         - name: chfnm
+           data_type: string
+         - name: chftitle
+           data_type: string
+         - name: gentele
+           data_type: string
+         - name: ein
+           data_type: string
+         - name: ueis
+           data_type: string
+         - name: opeid
+           data_type: int64
+         - name: opeflag
+           data_type: int64
+         - name: webaddr
+           data_type: string
+         - name: adminurl
+           data_type: string
+         - name: faidurl
+           data_type: string
+         - name: applurl
+           data_type: string
+         - name: npricurl
+           data_type: string
+         - name: veturl
+           data_type: string
+         - name: athurl
+           data_type: string
+         - name: disaurl
+           data_type: string
+         - name: sector
+           data_type: int64
+         - name: iclevel
+           data_type: int64
+         - name: control
+           data_type: int64
+         - name: hloffer
+           data_type: int64
+         - name: ugoffer
+           data_type: int64
+         - name: groffer
+           data_type: int64
+         - name: hdegofr1
+           data_type: int64
+         - name: deggrant
+           data_type: int64
+         - name: hbcu
+           data_type: int64
+         - name: hospital
+           data_type: int64
+         - name: medical
+           data_type: int64
+         - name: tribal
+           data_type: int64
+         - name: locale
+           data_type: int64
+         - name: openpubl
+           data_type: int64
+         - name: act
+           data_type: string
+         - name: newid
+           data_type: int64
+         - name: deathyr
+           data_type: int64
+         - name: closedat
+           data_type: string
+         - name: cyactive
+           data_type: int64
+         - name: postsec
+           data_type: int64
+         - name: pseflag
+           data_type: int64
+         - name: pset4flg
+           data_type: int64
+         - name: rptmth
+           data_type: int64
+         - name: instcat
+           data_type: int64
+         - name: c21basic
+           data_type: int64
+         - name: c21ipug
+           data_type: int64
+         - name: c21ipgrd
+           data_type: int64
+         - name: c21ugprf
+           data_type: int64
+         - name: c21enprf
+           data_type: int64
+         - name: c21szset
+           data_type: int64
+         - name: c18basic
+           data_type: int64
+         - name: c15basic
+           data_type: int64
+         - name: ccbasic
+           data_type: int64
+         - name: carnegie
+           data_type: int64
+         - name: landgrnt
+           data_type: int64
+         - name: instsize
+           data_type: int64
+         - name: f1systyp
+           data_type: int64
+         - name: f1sysnam
+           data_type: string
+         - name: f1syscod
+           data_type: string
+         - name: cbsa
+           data_type: int64
+         - name: cbsatype
+           data_type: int64
+         - name: csa
+           data_type: int64
+         - name: countycd
+           data_type: int64
+         - name: countynm
+           data_type: string
+         - name: cngdstcd
+           data_type: int64
+         - name: longitud
+           data_type: float64
+         - name: latitude
+           data_type: float64
+         - name: dfrcgid
+           data_type: int64
+         - name: dfrcuscg
+           data_type: int64
+
+     - name: hd2024
+       columns:
+         - name: unitid
+           data_type: int64
+           tests:
+             - not_null 
+             - unique
+         - name: instnm
+           data_type: string
+         - name: ialias
+           data_type: string
+         - name: addr
+           data_type: string
+         - name: city
+           data_type: string
+         - name: stabbr
+           data_type: string
+         - name: zip
+           data_type: string
+         - name: fips
+           data_type: int64
+         - name: obereg
+           data_type: int64
+         - name: chfnm
+           data_type: string
+         - name: chftitle
+           data_type: string
+         - name: gentele
+           data_type: string
+         - name: ein
+           data_type: string
+         - name: ueis
+           data_type: string
+         - name: opeid
+           data_type: int64
+         - name: opeflag
+           data_type: int64
+         - name: webaddr
+           data_type: string
+         - name: adminurl
+           data_type: string
+         - name: faidurl
+           data_type: string
+         - name: applurl
+           data_type: string
+         - name: npricurl
+           data_type: string
+         - name: veturl
+           data_type: string
+         - name: athurl
+           data_type: string
+         - name: disaurl
+           data_type: string
+         - name: sector
+           data_type: int64
+         - name: iclevel
+           data_type: int64
+         - name: control
+           data_type: int64
+         - name: hloffer
+           data_type: int64
+         - name: ugoffer
+           data_type: int64
+         - name: groffer
+           data_type: int64
+         - name: hdegofr1
+           data_type: int64
+         - name: deggrant
+           data_type: int64
+         - name: hbcu
+           data_type: int64
+         - name: hospital
+           data_type: int64
+         - name: medical
+           data_type: int64
+         - name: tribal
+           data_type: int64
+         - name: locale
+           data_type: int64
+         - name: openpubl
+           data_type: int64
+         - name: act
+           data_type: string
+         - name: newid
+           data_type: int64
+         - name: deathyr
+           data_type: int64
+         - name: closedat
+           data_type: string
+         - name: cyactive
+           data_type: int64
+         - name: postsec
+           data_type: int64
+         - name: pseflag
+           data_type: int64
+         - name: pset4flg
+           data_type: int64
+         - name: rptmth
+           data_type: int64
+         - name: instcat
+           data_type: int64
+         - name: c00carnegie
+           data_type: int64
+         - name: c21basic
+           data_type: int64
+         - name: carnegieic
+           data_type: int64
+         - name: carnegiesaec
+           data_type: int64
+         - name: carnegiersch
+           data_type: int64
+         - name: carnegiesize
+           data_type: int64
+         - name: carnegiealf
+           data_type: int64
+         - name: carnegieapm
+           data_type: int64
+         - name: carnegiegpm
+           data_type: int64
+         - name: landgrnt
+           data_type: int64
+         - name: instsize
+           data_type: int64
+         - name: f1systyp
+           data_type: int64
+         - name: f1sysnam
+           data_type: string
+         - name: f1syscod
+           data_type: string
+         - name: cbsa
+           data_type: int64
+         - name: cbsatype
+           data_type: int64
+         - name: csa
+           data_type: int64
+         - name: countycd
+           data_type: int64
+         - name: countynm
+           data_type: string
+         - name: cngdstcd
+           data_type: int64
+         - name: longitud
+           data_type: float64
+         - name: latitude
+           data_type: float64
+         - name: dfrcgid
+           data_type: int64
+         - name: dfrcuscg
+           data_type: int64

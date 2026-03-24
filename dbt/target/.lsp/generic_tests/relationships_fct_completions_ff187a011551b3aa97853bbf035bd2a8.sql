@@ -1,0 +1,1 @@
+{{ test_relationships(column_name="award_level", field="award_level", model=get_where_subquery(ref('fct_completions')), to=ref('dim_award_levels')) }}

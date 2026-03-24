@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="carnegie_vintage", model=get_where_subquery(source('raw', 'ipeds_survey_years'))) }}

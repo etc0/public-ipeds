@@ -1,0 +1,13 @@
+# dbt generated directories
+dbt_packages/
+logs/
+target/
+
+# dbt user-specific files
+.user.yml
+
+# dbt cli
+dbt
+
+# profiles (contains credentials/connection info - never commit)
+profiles.yml
