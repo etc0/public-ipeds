@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="unitid", model=get_where_subquery(source('raw', 'hd2021'))) }}

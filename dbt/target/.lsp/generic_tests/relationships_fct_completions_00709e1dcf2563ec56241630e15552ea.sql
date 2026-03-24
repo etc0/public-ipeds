@@ -1,1 +1,0 @@
-{{ test_relationships(column_name="survey_year", field="survey_year", model=get_where_subquery(ref('fct_completions')), to=ref('dim_survey_years')) }}

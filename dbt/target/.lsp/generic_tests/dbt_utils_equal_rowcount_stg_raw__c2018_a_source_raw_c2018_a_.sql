@@ -1,1 +1,0 @@
-{{ dbt_utils.test_equal_rowcount(compare_model=source('raw', 'c2018_a'), model=get_where_subquery(ref('stg_raw__c2018_a'))) }}

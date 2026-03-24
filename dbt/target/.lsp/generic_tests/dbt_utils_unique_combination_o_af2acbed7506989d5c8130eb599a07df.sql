@@ -1,1 +1,0 @@
-{{ dbt_utils.test_unique_combination_of_columns(combination_of_columns=["survey_year","institution_id","cip_code","award_level"], model=get_where_subquery(ref('fct_completions'))) }}

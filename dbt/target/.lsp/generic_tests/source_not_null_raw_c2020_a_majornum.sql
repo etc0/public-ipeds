@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="majornum", model=get_where_subquery(source('raw', 'c2020_a'))) }}

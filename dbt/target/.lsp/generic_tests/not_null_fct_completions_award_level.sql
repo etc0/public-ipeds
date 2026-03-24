@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="award_level", model=get_where_subquery(ref('fct_completions'))) }}

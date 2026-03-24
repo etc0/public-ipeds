@@ -1,1 +1,0 @@
-{{ test_unique(column_name="awlevel_code", model=get_where_subquery(ref('stg_seed__award_level_codes'))) }}

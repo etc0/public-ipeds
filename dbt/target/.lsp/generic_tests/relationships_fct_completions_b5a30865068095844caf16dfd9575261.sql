@@ -1,1 +1,0 @@
-{{ test_relationships(column_name="cip_code", field="cip_code", model=get_where_subquery(ref('fct_completions')), to=ref('dim_cip_codes')) }}

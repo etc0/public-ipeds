@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="awlevel_code", model=get_where_subquery(source('seed', 'award_level_codes'))) }}

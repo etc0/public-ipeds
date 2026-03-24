@@ -1,1 +1,0 @@
-{{ test_primary_key(column_name="award_level", model=get_where_subquery(ref('dim_award_levels'))) }}

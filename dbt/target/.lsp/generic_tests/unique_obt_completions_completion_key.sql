@@ -1,1 +1,0 @@
-{{ test_unique(column_name="completion_key", model=get_where_subquery(ref('obt_completions'))) }}

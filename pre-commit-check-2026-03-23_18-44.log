@@ -1,6 +1,0 @@
-Check the script does not contain a semicolon............................[42mPassed[m
-Check the script has no table name.......................................[42mPassed[m
-Check the script has existing refs and sources...........................[42mPassed[m
-Check the model has properties file......................................[42mPassed[m
-Source check columns.................................(no files to check)[46;30mSkipped[m
-Model check columns......................................................[42mPassed[m
