@@ -7,3 +7,15 @@ logs/
 # Pre-commit files, scripts, logs
 .pre-commit-config.yaml
 pre-commit-check*
+
+# dbt artifacts
+# dbt generated directories
+dbt/dbt_packages/
+dbt/logs/
+dbt/target/
+
+# dbt user-specific files
+dbt/.user.yml
+
+# dbt cli
+dbt/dbt

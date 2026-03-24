@@ -61,7 +61,7 @@ model, and visualizing key higher education metrics.
 4. Create a Python virtual environment
 5. Install Python requirements
 6. Set environment variable DBT_USER_SCHEMA='dwh'
-7. From the root folder, run: python -m ingestion/ingestion.py
+7. From the root folder, run: `python -m ingestion.ingestion`
 8. Navigate to the dbt folder and run: dbt build
 
 ## Notes
