@@ -22,7 +22,9 @@ model, and visualizing key higher education metrics.
 | Code Quality | pre-commit, dbt-checkpoint |
 
 ## Dashboard
-[View Live Dashboard](https://lookerstudio.google.com/reporting/c4844475-0d15-406f-8cd8-cbeb03332b2b)
+[View Live Dashboard: Metabase](https://venus.tail59a343.ts.net/public/dashboard/abda35ce-c89e-44cf-ab7b-e6a8f212ac51)
+
+[View Live Dashboard: Looker Studio](https://lookerstudio.google.com/reporting/c4844475-0d15-406f-8cd8-cbeb03332b2b)
 
 ## Key Features
 - Automated download and decompression of IPEDS ZIP files
