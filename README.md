@@ -17,7 +17,7 @@ model, and visualizing key higher education metrics.
 | Load | Python, pandas, google-cloud-bigquery |
 | Data Warehouse | GCP BigQuery |
 | Transformation | dbt |
-| Visualization | Looker Studio |
+| Visualization | Metabase, Looker Studio |
 | Version Control | Git/GitHub |
 | Code Quality | pre-commit, dbt-checkpoint |
 
@@ -45,6 +45,8 @@ model, and visualizing key higher education metrics.
 - dim_institution — annual snapshot of institutional characteristics
 - dim_cip_code — CIP 2020 program classification with STEM flags
 - dim_award_level — award level codes and categories
+- obt_completions - denormalized version of the model/one big table
+- obt_completions_yoy_by_state - one big table, specialized for year-over-year state growth rates
 
 ## Reports
 1. Total completions trend 2018-2024
@@ -54,17 +56,20 @@ model, and visualizing key higher education metrics.
 5. Gender gap by field of study
 6. State completions by academic year
 7. Top 25 institutions by completions
-6. Year-over-year growth rate by state
+8. Year-over-year growth rate by state
 
 ## Setup
-1. Create a GCP project named: 'data-eng-ipeds'
-2. Under the project, create two datasets named: 'raw' and 'dwh'
-3. Clone this GIT repository
-4. Create a Python virtual environment
-5. Install Python requirements
-6. Set environment variable DBT_USER_SCHEMA='dwh'
-7. From the root folder, run: `python -m ingestion.ingestion`
-8. Navigate to the dbt folder and run: dbt build
+1. Create a GCP project named: 'data-eng-ipeds' and two BigQuery datasets named: 'raw' and 'dwh'
+2. Clone this GIT repository
+3. Create a Python virtual environment
+4. Install Python requirements from requirements.txt
+5. Install the [Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install-sdk)
+6. To authenticate with Google Cloud, run: `gcloud auth application-default login`
+7. Install the [dbt CLI](https://docs.getdbt.com/docs/cloud/cloud-cli-installation)
+8. Create a [dbt profiles.yml](https://docs.getdbt.com/docs/local/profiles.yml) file with your BigQuery details
+9. Set environment variable DBT_USER_SCHEMA='dwh'
+10. From the root folder, run: `python -m ingestion.ingestion`
+11. Navigate to the dbt folder and run: dbt build
 
 ## Notes
 - The Python pandas library was used to create a dataframe as a source for loading completion data into Google BigQuery, since the BigQuery autodetect forced zero-padded CIP codes as float data type (e.g. 01.0105 -> 1.0105)
