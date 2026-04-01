@@ -6,25 +6,23 @@ cip_codes as (
 
 rename as (
     select
-        CIPCode         as cip_code,  -- primary key
-        CIPFamily       as cip_family,
-        CIPTitle        as cip_title,
-        CIPDefinition   as cip_definition,
+        c.CIPCode         as cip_code,  -- primary key
+        c.CIPFamily       as cip_family,
+        c.CIPTitle        as cip_title,
+        c.CIPDefinition   as cip_definition,
         -- Populate the CIP family title on each row
-        case instr(CIPCode, '.')
-            when 0 then null 
-            else (
-                select sq.CIPTitle 
-                from cip_codes sq 
-                where sq.CIPCode = substr(c.CIPCode, 1, 2)
-            )
+        case 
+            when {{ dbt.position("'.'", "c.CIPCode") }} = 0 then null 
+            else sq.CIPTitle 
         end             as cip_family_title,
         -- Uses Department of Homeland Security (DHS) definition of STEM fields
         case 
-            when substr(CIPCode, 0, 2) in ('14', '26', '27', '40') then 'STEM'
+            when substr(c.CIPCode, 0, 2) in ('14', '26', '27', '40') then 'STEM'
             else 'non-STEM'
         end             as is_stem
     from cip_codes c
+    left join cip_codes sq 
+        on substr(c.CIPCode, 1, 2) = sq.CIPCode
 
     union all
     

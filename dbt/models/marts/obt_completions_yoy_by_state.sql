@@ -1,19 +1,3 @@
--- models/marts/obt_completions.sql
-{{
-    config(
-        materialized='table',
-        partition_by={
-            "field": "survey_year",
-            "data_type": "int64",
-            "range": {
-                "start": 2018,
-                "end": 2035,
-                "interval": 1
-            }
-        }
-    )
-}}
-
 with 
     
 completions_by_year_state as (

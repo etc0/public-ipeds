@@ -1,38 +1,11 @@
+import os
 import pandas as pd
-from google.cloud import bigquery
 
 string_overrides: set = {"CIPCODE"}
-required_fields: set = {"UNITID", "CIPCODE", "MAJORNUM", "AWLEVEL"}
 
-def infer_schema(df: pd.DataFrame) -> list:
-    schema = []
-    for col in df.columns:
-        dwh_type = "STRING"
-        if col in string_overrides:
-            dwh_type = "STRING"
-        else:
-            pandas_dtype = str(df[col].dtype)
-            if pandas_dtype[:3] == "int":
-                dwh_type = "INTEGER"
-            elif pandas_dtype[:5] == "float":
-                dwh_type = "FLOAT"
-
-        mode = "NULLABLE"
-        if col in required_fields:
-            mode = "REQUIRED"
-
-        schema.append(bigquery.SchemaField(col, dwh_type, mode))
-    
-    return schema
-
-def load_file(type: str, source_dir: str, year: int, file_name: str, encoding: str, dataset_id: str) -> None:
-    print(f"Loading {file_name} into BigQuery...")
+def load_file(warehouse: str, type: str, source_dir: str, year: int, file_name: str, encoding: str, dataset_id: str) -> None:
+    print(f"Loading {file_name} into {warehouse}...")
     project_id: str = "data-eng-ipeds"
-    client: bigquery.Client = bigquery.Client(project=project_id)
-
-    # make sure the dataset exists
-    dataset: bigquery.Dataset = bigquery.Dataset(f"{project_id}.{dataset_id}")
-    client.create_dataset(dataset, exists_ok=True)
 
     # To get a standardized filename, remove the file extension and '_rv' if it exists
     table_name: str = file_name.split('.')[0].replace('_rv', '').lower()
@@ -45,22 +18,72 @@ def load_file(type: str, source_dir: str, year: int, file_name: str, encoding: s
             try:
                 df[col] = pd.to_numeric(df[col])
             except (ValueError, TypeError):
-                pass  # Keep original string values if conversion fails
+                pass  # Keep original data type if conversion fails
+        else:
+            df[col] = df[col].astype(str)
 
-    # Get the schema based on the DataFrame dtypes, applying overrides as needed
-    schema = infer_schema(df)
+    # Load data into the appropriate data warehouse type
+    if warehouse == 'snowflake':
+        import snowflake.connector
+        from snowflake.connector.pandas_tools import write_pandas
 
-    # define the job configuration for loading the file into BigQuery
-    job_config: bigquery.LoadJobConfig = bigquery.LoadJobConfig(
-        autodetect=False,
-        destination_table_description=f"IPEDS {type.capitalize()} data for {year}",
-        schema=schema,
-        write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
-    )
+        conn = snowflake.connector.connect(
+            user=os.getenv("SNOWFLAKE_USER"),
+            password=os.getenv("SNOWFLAKE_PASSWORD"),
+            account=os.getenv("SNOWFLAKE_ACCOUNT"),
+            warehouse=os.getenv("SNOWFLAKE_WAREHOUSE"),
+            role=os.getenv("SNOWFLAKE_ROLE"),
+            database=os.getenv("SNOWFLAKE_DATABASE"),
+            schema=os.getenv("SNOWFLAKE_SCHEMA")
+        )
 
-    # load the data into GCP BigQuery
-    job: bigquery.LoadJob = client.load_table_from_dataframe(df, table_id, job_config=job_config)
+        try:
+            write_pandas(conn, df, table_name.upper(), auto_create_table=True, overwrite=True)
+        except Exception as e:
+            for key, value in os.environ.items():
+                if key.startswith('SNOWFLAKE'):
+                    print(f"{key}: {value}")
+            print(f"Error loading data into Snowflake: {e}")
+            raise e
 
-    # Wait for job to complete
-    job.result()  
-    print(f"Loaded {client.get_table(table_id).num_rows} rows.")
+        # Show the number of rows loaded
+        cs = conn.cursor()
+        query = f"SELECT count(*) FROM {table_name};"
+        count = cs.execute(query).fetchone()[0]
+        print(f"Loaded {count} rows.")
+
+    else: # bigquery
+        from google.cloud import bigquery
+        client: bigquery.Client = bigquery.Client(project=project_id)
+        
+        # make sure the dataset exists
+        dataset: bigquery.Dataset = bigquery.Dataset(f"{project_id}.{dataset_id}")
+        client.create_dataset(dataset, exists_ok=True)
+
+        # Build the schema based on the DataFrame dtypes, applying overrides as needed
+        schema = []
+        for col in df.columns:
+            data_type = "STRING"
+            if col not in string_overrides:
+                pandas_dtype = str(df[col].dtype)
+                if pandas_dtype[:3] == "int":
+                    data_type = "INTEGER"
+                elif pandas_dtype[:5] == "float":
+                    data_type = "FLOAT"
+
+            schema.append(bigquery.SchemaField(col, data_type, "NULLABLE"))
+
+        # define the job configuration for loading the file into BigQuery
+        job_config: bigquery.LoadJobConfig = bigquery.LoadJobConfig(
+            autodetect=False,
+            destination_table_description=f"IPEDS {type.capitalize()} data for {year}",
+            schema=schema,
+            write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
+        )
+
+        # load the data into GCP BigQuery
+        job: bigquery.LoadJob = client.load_table_from_dataframe(df, table_id, job_config=job_config)
+        job.result()
+
+        # Show the number of rows loaded
+        print(f"Loaded {client.get_table(table_id).num_rows} rows.")

@@ -1,8 +1,18 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
 # Working directories
 .venv/
 .vscode/
-ingestion/data/**
+ingestion/data/completions/**
+ingestion/data/institutions/**
+ingestion/data/seeds/clean/**
 logs/
+
+# Environment variables
+.env
 
 # Pre-commit files, scripts, logs
 .pre-commit-config.yaml

@@ -1,18 +1,3 @@
-{{
-    config(
-        partition_by = {
-            "field": "survey_year",
-            "data_type": "int64",
-            "range": {
-                "start": 2018,
-                "end": 2035,
-                "interval": 1
-            }
-        },
-        cluster_by = ["institution_key", "cip_code", "award_level"]
-    )
-}}
-
 with 
 
 completions_by_year as (

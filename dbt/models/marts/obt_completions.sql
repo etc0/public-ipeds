@@ -1,20 +1,3 @@
--- models/marts/obt_completions.sql
-{{
-    config(
-        materialized='table',
-        partition_by={
-            "field": "survey_year",
-            "data_type": "int64",
-            "range": {
-                "start": 2018,
-                "end": 2035,
-                "interval": 1
-            }
-        },
-        cluster_by=["institution_name", "cip_title", "state_abbreviation", "award_level_description"]
-    )
-}}
-
 select
     -- Survey year attributes
     s.survey_year,

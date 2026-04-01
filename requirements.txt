@@ -1,4 +1,9 @@
 chardet
+dbt-core
+dbt-bigquery
+dbt-snowflake
 google-cloud-bigquery
 pandas
+python-dotenv
 requests
+snowflake-connector-python[pandas]

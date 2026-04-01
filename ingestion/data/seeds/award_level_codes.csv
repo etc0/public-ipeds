@@ -1,0 +1,12 @@
+awlevel_code,awlevel_description,awlevel_category
+1,Postsecondary award certificate or diploma (less than 1 year),Subbaccalaureate
+2,Postsecondary award certificate or diploma (at least 1 but less than 2 years),Subbaccalaureate
+3,Associate's degree,Undergraduate
+4,Postsecondary award certificate or diploma (at least 2 but less than 4 years),Subbaccalaureate
+5,Bachelor's degree,Undergraduate
+6,Postbaccalaureate certificate,Postbaccalaureate
+7,Master's degree,Postbaccalaureate
+8,Post-master's certificate,Postbaccalaureate
+17,Doctor's degree - research/scholarship,Doctoral
+18,Doctor's degree - professional practice,Doctoral
+19,Doctor's degree - other,Doctoral
