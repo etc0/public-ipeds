@@ -7,6 +7,9 @@ and institutional characteristics data for survey years 2018-2024
 into a cloud warehouse, transforming it into an analytical data 
 model, and visualizing key higher education metrics.
 
+Supported warehouses: Snowflake or BigQuery<br>
+Reporting BI tools: Metabase and Looker Studio
+
 ## Architecture
 <img src="docs/data-pipeline-ipeds.drawio.png" width="250">
 
