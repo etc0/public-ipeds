@@ -37,7 +37,7 @@ model, and visualizing key higher education metrics.
 - Pre-commit hooks enforcing code quality
 
 ## Data Model
-[Data Model Documentation](docs/static_index.html)
+[Data Model Documentation](https://etc0.github.io/public-ipeds/static_index.html)
 
 ### Dimensional Model
 - fct_completions — grain: one row per year/institution/CIP/award level
