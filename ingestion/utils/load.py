@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-string_overrides: set = {"CIPCODE"}
+string_overrides: set = {"CIPCODE", "OPEID", "GENTELE", "EIN", "F1SYSCOD"}
 
 def load_file(warehouse: str, type: str, source_dir: str, year: int, file_name: str, encoding: str, dataset_id: str) -> None:
     print(f"Loading {file_name} into {warehouse}...")

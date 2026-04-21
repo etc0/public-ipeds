@@ -19,7 +19,7 @@ with source as (
         ein as employer_identification_number,
         cast(null as string) as duns_number,  -- retired
         ueis as ueis_number,
-        cast(opeid as integer) as ope_id,
+        cast(opeid as string) as ope_id,
         opeflag as ope_flag,
         webaddr as website_address,
         adminurl as admin_url,

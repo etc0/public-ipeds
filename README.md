@@ -81,7 +81,7 @@ Reporting BI tools: Metabase and Looker Studio
     - To select your project and account, from the terminal run: `gcloud init`
     - Authenticate with Google by running: `gcloud auth application-default login`
 7. Install the [dbt CLI](https://docs.getdbt.com/docs/cloud/cloud-cli-installation)
-8. Navigate to the dbt folder and run: `dbt init` to generate your [dbt profiles.yml](https://docs.getdbt.com/docs/local/profiles.yml) file. Note: enter `dwh` for the schema
+8. Navigate to the dbt folder and run: `dbt init` to generate your [dbt profiles.yml](https://docs.getdbt.com/docs/local/profiles.yml) file. Note: enter `dwh` for the dbt dataset
 9. Run `dbt debug` to verify the dbt connection to your warehouse
 
 ## Running

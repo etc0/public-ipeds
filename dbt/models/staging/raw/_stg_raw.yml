@@ -1474,7 +1474,7 @@ models:
         data_type: string
 
       - name: employer_identification_number
-        data_type: int64
+        data_type: string
 
       - name: duns_number
         data_type: string
@@ -1483,7 +1483,7 @@ models:
         data_type: string
 
       - name: ope_id
-        data_type: int64
+        data_type: string
 
       - name: ope_flag
         data_type: int64
@@ -1663,7 +1663,7 @@ models:
         data_type: string
 
       - name: system_code
-        data_type: int64
+        data_type: string
 
       - name: core_based_statistical_area_code
         data_type: int64
@@ -1744,7 +1744,7 @@ models:
         data_type: string
 
       - name: employer_identification_number
-        data_type: int64
+        data_type: string
 
       - name: duns_number
         data_type: string
@@ -1753,7 +1753,7 @@ models:
         data_type: string
 
       - name: ope_id
-        data_type: int64
+        data_type: string
 
       - name: ope_flag
         data_type: int64
@@ -1933,7 +1933,7 @@ models:
         data_type: string
 
       - name: system_code
-        data_type: int64
+        data_type: string
 
       - name: core_based_statistical_area_code
         data_type: int64
@@ -2014,7 +2014,7 @@ models:
         data_type: string
 
       - name: employer_identification_number
-        data_type: int64
+        data_type: string
 
       - name: duns_number
         data_type: string
@@ -2023,7 +2023,7 @@ models:
         data_type: string
 
       - name: ope_id
-        data_type: int64
+        data_type: string
 
       - name: ope_flag
         data_type: int64
@@ -2203,7 +2203,7 @@ models:
         data_type: string
 
       - name: system_code
-        data_type: int64
+        data_type: string
 
       - name: core_based_statistical_area_code
         data_type: int64
@@ -2284,7 +2284,7 @@ models:
         data_type: string
 
       - name: employer_identification_number
-        data_type: int64
+        data_type: string
 
       - name: duns_number
         data_type: string
@@ -2293,7 +2293,7 @@ models:
         data_type: string
 
       - name: ope_id
-        data_type: int64
+        data_type: string
 
       - name: ope_flag
         data_type: int64
@@ -2473,7 +2473,7 @@ models:
         data_type: string
 
       - name: system_code
-        data_type: int64
+        data_type: string
 
       - name: core_based_statistical_area_code
         data_type: int64
@@ -2554,7 +2554,7 @@ models:
         data_type: string
 
       - name: employer_identification_number
-        data_type: int64
+        data_type: string
 
       - name: duns_number
         data_type: string
@@ -2563,7 +2563,7 @@ models:
         data_type: string
 
       - name: ope_id
-        data_type: int64
+        data_type: string
 
       - name: ope_flag
         data_type: int64
@@ -2743,7 +2743,7 @@ models:
         data_type: string
 
       - name: system_code
-        data_type: int64
+        data_type: string
 
       - name: core_based_statistical_area_code
         data_type: int64
@@ -2824,7 +2824,7 @@ models:
         data_type: string
 
       - name: employer_identification_number
-        data_type: int64
+        data_type: string
 
       - name: duns_number
         data_type: string
@@ -2833,7 +2833,7 @@ models:
         data_type: string
 
       - name: ope_id
-        data_type: int64
+        data_type: string
 
       - name: ope_flag
         data_type: int64
@@ -3013,7 +3013,7 @@ models:
         data_type: string
 
       - name: system_code
-        data_type: int64
+        data_type: string
 
       - name: core_based_statistical_area_code
         data_type: int64
@@ -3094,7 +3094,7 @@ models:
         data_type: string
 
       - name: employer_identification_number
-        data_type: int64
+        data_type: string
 
       - name: duns_number
         data_type: string
@@ -3103,7 +3103,7 @@ models:
         data_type: string
 
       - name: ope_id
-        data_type: int64
+        data_type: string
 
       - name: ope_flag
         data_type: int64
@@ -3283,7 +3283,7 @@ models:
         data_type: string
 
       - name: system_code
-        data_type: int64
+        data_type: string
 
       - name: core_based_statistical_area_code
         data_type: int64
