@@ -25,7 +25,7 @@ def main():
     data: str = "data"
     clean: str = "clean"
     dbt: str = "dbt"
-    dataset: str = "raw"
+    schema: str = "raw"
     completions_target: Path = Path(__file__).resolve().parent / data / completions
     institutions_target: Path = Path(__file__).resolve().parent / data / institutions
     seeds_target: Path = Path(__file__).resolve().parent / data / seeds
@@ -44,8 +44,8 @@ def main():
 
     # for each year 2018-2024, import the appropriate csv files into GCP BigQuery
     for year in range(2018, 2025):
-        load_completions(warehouse, completions_target, completions_clean, year, dataset)
-        load_institutions(warehouse, institutions_target, institutions_clean, year, dataset)
+        load_completions(warehouse, completions_target, completions_clean, year, schema)
+        load_institutions(warehouse, institutions_target, institutions_clean, year, schema)
 
     # clean the seeds files and copy them to the dbt seeds directory
     for file in seeds_target.iterdir():

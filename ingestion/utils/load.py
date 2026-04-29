@@ -3,13 +3,13 @@ import pandas as pd
 
 string_overrides: set = {"CIPCODE", "OPEID", "GENTELE", "EIN", "F1SYSCOD"}
 
-def load_file(warehouse: str, type: str, source_dir: str, year: int, file_name: str, encoding: str, dataset_id: str) -> None:
+def load_file(warehouse: str, type: str, source_dir: str, year: int, file_name: str, encoding: str, schema: str) -> None:
     print(f"Loading {file_name} into {warehouse}...")
     project_id: str = "data-eng-ipeds"
 
     # To get a standardized filename, remove the file extension and '_rv' if it exists
     table_name: str = file_name.split('.')[0].replace('_rv', '').lower()
-    table_id: str = f"{project_id}.{dataset_id}.{table_name}"
+    table_id: str = f"{project_id}.{schema}.{table_name}"
 
     # Convert columns to numeric where possible, except those in string_overrides
     df = pd.read_csv(f"{source_dir}/{file_name}", dtype=str, encoding=encoding)
@@ -34,7 +34,7 @@ def load_file(warehouse: str, type: str, source_dir: str, year: int, file_name: 
             warehouse=os.getenv("SNOWFLAKE_WAREHOUSE"),
             role=os.getenv("SNOWFLAKE_ROLE"),
             database=os.getenv("SNOWFLAKE_DATABASE"),
-            schema=os.getenv("SNOWFLAKE_SCHEMA")
+            schema=schema
         )
 
         try:
@@ -57,7 +57,7 @@ def load_file(warehouse: str, type: str, source_dir: str, year: int, file_name: 
         client: bigquery.Client = bigquery.Client(project=project_id)
         
         # make sure the dataset exists
-        dataset: bigquery.Dataset = bigquery.Dataset(f"{project_id}.{dataset_id}")
+        dataset: bigquery.Dataset = bigquery.Dataset(f"{project_id}.{schema}")
         client.create_dataset(dataset, exists_ok=True)
 
         # Build the schema based on the DataFrame dtypes, applying overrides as needed

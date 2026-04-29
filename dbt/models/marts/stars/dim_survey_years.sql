@@ -1,4 +1,6 @@
-with survey_years as (
+with 
+
+survey_years as (
 
     select * from {{ ref('stg_seed__survey_years') }}
 

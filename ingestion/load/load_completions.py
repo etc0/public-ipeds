@@ -31,8 +31,8 @@ def get_file(source_dir: str, year: int) -> str:
 def clean_file(source_dir: str, clean_dir: str, file_name: str) -> str:
     return csv_fix_quotes(source_dir, clean_dir, file_name)
 
-def load_completions(warehouse: str, source_dir: str, clean_dir: str, year: int, dataset_id: str) -> None:
+def load_completions(warehouse: str, source_dir: str, clean_dir: str, year: int, schema: str) -> None:
     file_name: str = get_file(source_dir, year)
     if file_name:
         encoding = clean_file(source_dir, clean_dir, file_name)
-        load_file(warehouse, type, clean_dir, year, file_name, encoding, dataset_id)
+        load_file(warehouse, type, clean_dir, year, file_name, encoding, schema)

@@ -9,4 +9,21 @@ model-paths: ["models"]
 seed-paths: ["seeds"]
 
 models:
-  +materialized: view
+  public_ipeds:
+    staging:
+      +schema: stage
+      +materialized: view
+
+    intermediate:
+      +materialized: ephemeral
+
+    marts:
+      +schema: marts
+      +materialized: table
+      stars: 
+        +schema: stars
+        +materialized: view
+
+seeds:
+  public_ipeds:
+    +schema: raw
