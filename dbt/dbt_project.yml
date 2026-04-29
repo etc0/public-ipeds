@@ -10,7 +10,3 @@ seed-paths: ["seeds"]
 
 models:
   +materialized: view
-  
-  public_ipeds:
-    marts:
-      +materialized: table

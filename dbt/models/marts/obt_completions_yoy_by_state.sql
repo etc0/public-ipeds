@@ -1,5 +1,36 @@
-with 
+{{
+    config(
+        materialized='table'
+    )
+}}
     
+with 
+
+survey_years as (
+    select 
+        survey_year,
+        academic_year,
+    from {{ ref('dim_survey_years') }}
+),
+
+institutions as (
+    select 
+        institution_key,
+        state_abbreviation
+    from {{ ref('dim_institutions') }} 
+),
+
+completions as (
+    select    
+        survey_year, 
+        institution_key,
+        total_completions,
+        male_completions,
+        female_completions
+    from {{ ref('fct_completions') }}
+),
+
+
 completions_by_year_state as (
     select
         -- Survey year attributes
@@ -12,10 +43,10 @@ completions_by_year_state as (
         -- Fact measures
         sum(f.total_completions) as state_completions
 
-    from {{ ref('fct_completions') }} f
-    left join {{ ref('dim_survey_years') }} s 
+    from completions f
+    left join survey_years s 
         on f.survey_year = s.survey_year
-    left join {{ ref('dim_institutions') }} i 
+    left join institutions i 
         on f.institution_key = i.institution_key
     group by 
         s.survey_year,
@@ -23,7 +54,7 @@ completions_by_year_state as (
         i.state_abbreviation
 ),
 
-calculate as (
+obt as (
     select 
         c.survey_year,
         c.academic_year,
@@ -45,4 +76,4 @@ calculate as (
     where p.survey_year is not null
 )
 
-select * from calculate
+select * from obt
